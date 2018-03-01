@@ -11,6 +11,28 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/
+
+Route::get('/', 'PagesController@index');
+
+Route::get('/about', 'PagesController@about');
+
+Route::get('/blog', 'PagesController@blog');
+
+Route::get('/finds', 'PagesController@finds');
+
+Route::get('/shop', 'PagesController@shop');
+
+
+Route::get('/products', function () {
+    $products = DB::table('products_pro')->get();
+    return $products;
+   // return view('products', compact('products'));
 });
+
+
+/*Route::get('/about', function () {
+    return view('pages.about');
+});*/

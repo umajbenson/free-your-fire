@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "shorelines script";
+    src: url("../fonts/shorelines-script-bold.otf");
+}
+* {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    /*font-size:100%;*/
+    vertical-align:baseline;
+    text-decoration:none;
+}
+body {
+    
+}
+main {
+    max-width: 960px;
+    margin: auto;
+}
+h1 {
+    font-family: "amatic sc";
+    font-weight: 400;
+    font-size: 100px;
+    letter-spacing: 7px;
+    line-height: 1;
+    text-align: center;
+    text-shadow: -3px 0 1px #dddbdb;
+    margin-top: 15px;
+    /*border: 1px solid red;*/
+}
+#logo-img {
+    display: none;
+}
+#your, span {
+    display: inline-block;
+    letter-spacing: 2px;
+    /*border: 1px solid red;*/
+}
+#triangle1 {
+    padding: 0 5px 10px  0;
+    /*border: 1px solid red;*/
+}
+#triangle2 {
+    padding: 0 7px 10px  3px;
+    /*border: 1px solid red;*/
+}
+header h2 {
+    text-align: center;
+    font-family: "shorelines script";
+    font-size: 24px;
+    font-weight: 400;
+    /*border: 1px solid red;*/
+}
+#top-nav-row {
+    background: #ffd54c; 
+    padding: 5px 0;
+}
+#main-nav {
+    width: 60%;
+    margin-left: 5px;
+}
+#login-nav {
+    float: right;
+    width: 200px;
+}
+li {
+    display: inline-block;
+}
+a {
+    color: #000;
+    font-family: "amatic sc";
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: .6px;
+    padding: 0 15px;
+}
+#hero {
+    max-width: 100%; 
+}
+main h2 {
+    text-align: center;
+    /*background: #fff;
+    transform: rotate(-17deg);*/
+    font-family: "amatic sc";
+    font-size: 50px;
+    letter-spacing: 2px;   
+}
+
+@media only screen and (max-width: 686px) {
+    
+    h1 {
+        /*border: 1px solid red;*/
+        float: right;
+        width: 60%;
+        text-align: left;
+        line-height: .9;
+        margin-bottom: 30px;
+        margin-top: -10px;;
+    }
+    #your {
+        display: block;
+    }
+    #triangle1, #triangle2 {
+        display: none;
+    }
+    header h2 {
+        display: none;   
+    }
+     li {
+        display: block;
+         padding: 0;
+    }
+    #login-nav {
+        float: none;
+        margin-left: 5px;
+        margin-bottom: 25px;
+       /* border: 1px solid red;*/
+    }
+    #login-nav a {
+        font-family: "shorelines script";
+        font-size: 15px;
+        line-height: 2;
+    }
+    #main-nav li {
+        margin-bottom: 10px;
+    }
+    #main-nav a {
+        font-size: 25px;
+        /*border: 1px solid red;*/
+    }
+    #top-nav-row, #main-nav, #login-nav {
+        width: 135px;
+        /*border: 1px solid red;*/
+    }
+    #top-nav-row {
+        /*border: 1px solid red; */
+        background: none;
+        margin-top: 30px;
+        border-right: 1px solid black;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
