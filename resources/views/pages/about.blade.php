@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.master')
+
+@section('title')     
+    Free Your Fire - About
+@endsection
 
 @section('content')     
     <h1>About</h1>

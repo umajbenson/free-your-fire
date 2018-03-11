@@ -1,90 +1,130 @@
 @font-face {
-    font-family: "shorelines script";
-    src: url("../fonts/shorelines-script-bold.otf");
+    font-family: "antro vectra";
+    src: url("../fonts/antro_vectra.otf");
 }
+@font-face {
+    font-family: "oh samantha";
+    src: url("../fonts/oh-samantha demo.ttf");
+}
+
 * {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    /*font-size:100%;*/
-    vertical-align:baseline;
-    text-decoration:none;
+    margin: 0;
+    padding: 0;
+    /*border: 0;*/
+    /*outline: 0;*/
+    /*vertical-align: baseline;*/
+    text-decoration: none;
 }
 body {
+    /*background: #ccc;*/
+    /*background-image: url("../images/roses-bg.jpg");*/
+    max-width: 100%;
+}
+#wrapper {
+    max-width: 1520px;
+    /*max-width: 100%;*/
+    margin: 0 auto;
+    /*background: #fffeff;*/
     
+    /*border: 1px solid green;*/
+}
+#main-wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    background: white;
+    /*display: flex;*/
+   /* border: 1px solid red;*/
 }
 main {
-    max-width: 960px;
-    margin: auto;
+    max-width: 100%;
+    /*background: #fffff9;*/
+    /*background-image: url("../images/sun-bg.jpg");*/
+    /*filter: opacity(.2);*/
+    /*border: 1px solid red;*/
 }
-h1 {
-    font-family: "amatic sc";
-    font-weight: 400;
-    font-size: 100px;
-    letter-spacing: 7px;
-    line-height: 1;
+
+h1 { 
+    /*font-family: "antro vectra";*/
+    font-family: "antro vectra";
+    
+    /*text-transform: lowercase;*/
+    /*font-weight: 400;*/
+    font-size: 70px;
+    /*line-height: 1;*/
+    /*color: #736B5F;*/
+    color: #525252;
     text-align: center;
-    text-shadow: -3px 0 1px #dddbdb;
-    margin-top: 15px;
-    /*border: 1px solid red;*/
+    padding-top: 50px;
 }
-#logo-img {
-    display: none;
-}
-#your, span {
-    display: inline-block;
-    letter-spacing: 2px;
-    /*border: 1px solid red;*/
-}
-#triangle1 {
-    padding: 0 5px 10px  0;
-    /*border: 1px solid red;*/
-}
-#triangle2 {
-    padding: 0 7px 10px  3px;
-    /*border: 1px solid red;*/
-}
+
 header h2 {
     text-align: center;
-    font-family: "shorelines script";
-    font-size: 24px;
-    font-weight: 400;
+    font-family: "montserrat";
+    letter-spacing: 7px;
+    /*color: #928F88;*/
+    color: #736B5F;
+    font-size: 12px;
+    padding-bottom: 30px;
+    /*font-weight: 600;*/
+    text-transform: lowercase;
     /*border: 1px solid red;*/
-}
-#top-nav-row {
-    background: #ffd54c; 
-    padding: 5px 0;
+    
 }
 #main-nav {
-    width: 60%;
-    margin-left: 5px;
+    max-width: 1520px;
+    /*padding-top: 30px;*/
 }
-#login-nav {
-    float: right;
-    width: 200px;
-}
-li {
-    display: inline-block;
-}
-a {
-    color: #000;
-    font-family: "amatic sc";
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: .6px;
-    padding: 0 15px;
+/*#main-nav img {
+    vertical-align: middle; 
+}*/
+#cart {
+  /*vertical-align: -3px; */
 }
 #hero {
-    max-width: 100%; 
+    max-width: 100%;
+    height: auto;
 }
 main h2 {
     text-align: center;
     /*background: #fff;
     transform: rotate(-17deg);*/
-    font-family: "amatic sc";
-    font-size: 50px;
-    letter-spacing: 2px;   
+    font-family: "courgette";
+    font-size: 35px;
+    font-weight: normal;
+    /*margin-top: 0;*/
+    color: #525252;
+    /*letter-spacing: 2px;*/
+    padding: 30px 0;
+}
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: .5vw;
+}
+.row div {
+  margin: 1.3vw; 
+}
+.row div img {
+    width: 100%;
+    height: auto;
+}
+.row p {
+    text-align: center;
+}
+fieldset {
+    border: none;
+    text-align: center;
+   
+}
+legend {
+    display: none;
+}
+#shop-image {
+    max-width: 100%;
+    /*height: auto;*/
+    /*filter: opacity(50%);*/
+    /*/border: 1px solid red;*/
 }
 
 @media only screen and (max-width: 686px) {

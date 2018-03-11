@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+/*use Product;*/
 
 class CreateProductsTable extends Migration
 {
@@ -17,8 +18,8 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->timestamps();
           
-            $table->string('name_pro',75);
-            $table->text('description_pro');
+            $table->string('name',75);
+            $table->text('description');
             
             
         });

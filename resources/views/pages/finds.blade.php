@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.master')
+
+@section('title')     
+    Free Your Fire - $5 Finds
+@endsection
 
 @section('content')     
     <h1>$5 Finds</h1>
