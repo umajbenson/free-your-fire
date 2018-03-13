@@ -1,10 +1,13 @@
-@extends('layouts.master')
+@extends('layouts.products')
 
 @section('title')     
     Free Your Fire - Pre-Owned Necklaces
 @endsection
 
-@section('content')     
-    <h1>Pre-Owned Necklaces</h1>
-   
-@endsection
+ @section('image')     
+    <img id="shop-image" src="images/necklace-crop.jpg">
+ @endsection
+     
+ @section('h2')
+    Pre-owned Necklaces
+ @endsection

@@ -20,8 +20,8 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/freeyourfire.js"></script>
 
-    <title>@yield('title')</title> 
-
+    <title>@yield('title')</title>
+    
 </head>
 
 <body>
@@ -39,11 +39,16 @@
 <main>
     @yield('image')
     
-    <div id="main-wrapper">
+    <div id="main-wrapper"> 
+        <h2 class="product-h2">@yield('h2')</h2>
 
-        <h2>@yield('h2')</h2>
-        <p>@yield('p')</p>
-</div> <!-- end #main-wrapper -->
+        @include('partials.filters')   
+
+        @include('partials.sort')
+
+        @include('partials.display_items')
+    
+    </div> <!-- end #main-wrapper -->
 </main>
 <footer>
 
@@ -51,4 +56,3 @@
 </div>
 </body>
 </html>
-

@@ -1,10 +1,14 @@
-@extends('layouts.master')
+@extends('layouts.products')
 
 @section('title')     
     Free Your Fire - Pre-Owned Earrings
 @endsection
 
-@section('content')     
-    <h1>Pre-Owned Earrings</h1>
-   
-@endsection
+
+ @section('image')     
+    <img id="shop-image" src="images/earrings-crop.jpg">
+ @endsection
+     
+ @section('h2')
+    Pre-owned Earrings
+ @endsection

@@ -1,10 +1,14 @@
-@extends('layouts.master')
+@extends('layouts.products')
 
 @section('title')     
-    Free Your Fire - $5 Finds
+    Free Your Fire - Five Dollar Finds
 @endsection
 
-@section('content')     
-    <h1>$5 Finds</h1>
-    <p>Really good deals to tag on to your order</p>
-@endsection
+
+ @section('image')     
+    <img id="shop-image" src="images/treasure-chest-crop2.jpg">
+ @endsection
+     
+ @section('h2')
+    $5 Finds
+ @endsection

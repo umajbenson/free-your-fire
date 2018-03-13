@@ -4,8 +4,7 @@
     Free Your Fire - Pre-owned Jewelry
 @endsection
 
-@section('content')     
-    <h1>Pre-owned Jewelry</h1>
-
+@section('h2')     
+    Pre-owned Jewelry
 @endsection
 

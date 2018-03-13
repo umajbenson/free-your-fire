@@ -23,19 +23,19 @@ Route::get('/handmade', 'PagesController@handmade');
 
 Route::get('/preowned', 'PagesController@preowned');
 
-Route::get('/po-earrings', 'PagesController@po_earrings');
+Route::get('/po-earrings', 'ProductController@po_earrings');
 
-Route::get('/po-necklaces', 'PagesController@po_necklaces');
+Route::get('/po-necklaces', 'ProductController@po_necklaces');
 
 Route::get('/po-bracelets', 'ProductController@po_bracelets');
 
-Route::get('/po-rings', 'PagesController@po_rings');
+Route::get('/po-rings', 'ProductController@po_rings');
 
-Route::get('/po-brooches', 'PagesController@po_brooches');
+Route::get('/po-brooches', 'ProductController@po_brooches');
 
-Route::get('/po-sets', 'PagesController@po_sets');
+Route::get('/po-sets', 'ProductController@po_sets');
 
-Route::get('/finds', 'PagesController@finds');
+Route::get('/finds', 'ProductController@finds');
 
 Route::get('/cart', 'PagesController@cart');
 
