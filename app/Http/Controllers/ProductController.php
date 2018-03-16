@@ -7,6 +7,13 @@ use App\Product;
 
 class ProductController extends Controller
 {
+   /* public function po_bracelets(Request $request){
+        $products = Product::where('id_cat', '3');
+       // $myCheckboxes = $request->input('filters');
+        //dd($myCheckboxes);
+        return view('pages.po-bracelets', ['products' => $products]);
+    }*/
+
     public function po_bracelets(){
         $products = Product::where('id_cat', '3')->get();
         return view('pages.po-bracelets', ['products' => $products]);
@@ -14,6 +21,7 @@ class ProductController extends Controller
 
     public function po_brooches(){
         $products = Product::where('id_cat', '5')->get();
+        
         return view('pages.po-brooches', ['products' => $products]);
     }
    

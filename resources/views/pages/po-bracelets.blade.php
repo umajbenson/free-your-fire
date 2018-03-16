@@ -1,5 +1,9 @@
 @extends('layouts.products')
 
+////////@section('title')     
+    {{ $product->name_pro }}    
+@endsection
+
 @section('title')     
     Free Your Fire - Pre-Owned Bracelets
 @endsection
