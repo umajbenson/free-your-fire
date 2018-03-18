@@ -54,9 +54,9 @@ class PagesController extends Controller
         return view('pages.cart');
     }
 
-    /*public function login(){
-        return view('pages.login');
-    }*/
+    public function members(){
+        return view('pages.members');
+    }
 
     /*public function register(){
         return view('pages.register');

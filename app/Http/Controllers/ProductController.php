@@ -14,6 +14,10 @@ class ProductController extends Controller
         return view('pages.po-bracelets', ['products' => $products]);
     }*/
 
+    public function show($id_cat){
+        return view('pages.show');
+    }
+
     public function po_bracelets(){
         $products = Product::where('id_cat', '3')->get();
         return view('pages.po-bracelets', ['products' => $products]);

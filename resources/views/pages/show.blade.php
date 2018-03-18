@@ -1,14 +1,14 @@
 @extends('layouts.products')
 
 @section('title')     
-    Free Your Fire - Pre-Owned Bracelets
+    Free Your Fire - Pre-Owned Rings
 @endsection
 
 
  @section('image')     
-    <img id="shop-image" src="images/bracelet-crop.jpg">
+    <img id="shop-image" src="images/rings-crop2.jpg">
  @endsection
      
  @section('h2')
-    Pre-owned Bracelets
+    Pre-owned Rings
  @endsection

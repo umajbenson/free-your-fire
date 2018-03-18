@@ -11,6 +11,7 @@
 |
 */
 
+
 /*Route::get('/', function () {
     return view('welcome');
 });*/
@@ -22,6 +23,8 @@ Route::get('/about', 'PagesController@about');
 Route::get('/handmade', 'PagesController@handmade');
 
 Route::get('/preowned', 'PagesController@preowned');
+
+Route::get('show/{id_cat}', 'ProductController@show');
 
 Route::get('/po-earrings', 'ProductController@po_earrings');
 
@@ -37,11 +40,14 @@ Route::get('/po-sets', 'ProductController@po_sets');
 
 Route::get('/finds', 'ProductController@finds');
 
+Route::get('/members', 'PagesController@members');
+
+
 Route::get('/cart', 'PagesController@cart');
 
-Route::get('/login', 'PagesController@login');
+Route::get('/login', 'LoginController@login');
 
-Route::get('/register', 'PagesController@register');
+Route::get('/register', 'RegisterController@register');
 
 
 
@@ -59,3 +65,5 @@ Route::get('/register', 'PagesController@register');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'AdminController@index')->name('admin');
+

@@ -23,6 +23,8 @@
                     </ul> 
             </li>
             <li><a href="finds">$5 Finds</a></li>
+            <li><a href="members">Members Area</a></li>
+            
             <li class="right-links"><a href="register">Register</a></li>
             <li class="right-links"><a href="login">Login</a></li>
             <li class="right-links"><a href="cart"><span id="cart"><img src="images/if_shopping-cart-small.png" width=20></span> Cart</a> </li>
