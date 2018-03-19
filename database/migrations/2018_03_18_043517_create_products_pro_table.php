@@ -22,11 +22,11 @@ class CreateProductsProTable extends Migration
             $table->integer('price_pro');
             $table->string('image_path_pro', 60);
             $table->decimal('weight_pro', 4, 2)->nullable();
-            $table->boolean('is_vintage');
-            $table->boolean('is_precious');
-            $table->boolean('is_gemstone');
-            $table->boolean('is_rhinestone');
-            $table->boolean('is_other');          
+            $table->boolean('is_vintage_pro');
+            $table->boolean('is_precious_pro');
+            $table->boolean('is_gemstone_pro');
+            $table->boolean('is_rhinestone_pro');
+            $table->boolean('is_other_pro');          
             $table->boolean('is_active_pro');                                               
             $table->timestamps();
         });

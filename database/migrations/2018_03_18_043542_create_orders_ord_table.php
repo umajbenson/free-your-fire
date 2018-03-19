@@ -13,7 +13,7 @@ class CreateOrdersOrdTable extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('orders_ord');
+        //Schema::dropIfExists('orders_ord');
         Schema::create('orders_ord', function (Blueprint $table) {
             $table->increments('id_ord');
             $table->integer('user_id')->unsigned();
