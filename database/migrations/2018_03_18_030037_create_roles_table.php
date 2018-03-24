@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStatesStaTable extends Migration
+class CreateRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateStatesStaTable extends Migration
      */
     public function up()
     {
-        Schema::create('states_sta', function (Blueprint $table) {
-            $table->increments('id_sta');
-            $table->char('name_sta', 2)->unique();            
+        Schema::create('roles', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->unique();           
+            $table->timestamps();
         });
     }
 
@@ -26,6 +27,6 @@ class CreateStatesStaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('states_sta');
+        Schema::dropIfExists('roles');
     }
 }

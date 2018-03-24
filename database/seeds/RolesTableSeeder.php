@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class RolesRolTableSeeder extends Seeder
+class RolesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,18 +11,18 @@ class RolesRolTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('roles_rol')->insert([
-            'name_rol' => 'Member',
+        DB::table('roles')->insert([
+            'name' => 'Member',
             'created_at' => Carbon::now() -> format('Y-m-d H:i:s'),
         ]);
 
-        DB::table('roles_rol')->insert([
-            'name_rol' => 'Customer',
+        DB::table('roles')->insert([
+            'name' => 'Customer',
             'created_at' => Carbon::now() -> format('Y-m-d H:i:s'),
         ]);
 
-        DB::table('roles_rol')->insert([
-            'name_rol' => 'Member/Customer',
+        DB::table('roles')->insert([
+            'name' => 'Member/Customer',
             'created_at' => Carbon::now() -> format('Y-m-d H:i:s'),
         ]);
     }

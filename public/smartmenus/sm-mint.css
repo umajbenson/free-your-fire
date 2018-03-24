@@ -224,7 +224,7 @@
   }
   .sm-mint ul a:hover, .sm-mint ul a:focus, .sm-mint ul a:active, .sm-mint ul a.highlighted {
     background: none;
-    color: #fff;
+    color: ##D8B86F;
     box-shadow: none;
   }
   .sm-mint ul a.disabled {

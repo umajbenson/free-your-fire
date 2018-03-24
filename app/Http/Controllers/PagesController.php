@@ -21,8 +21,8 @@ class PagesController extends Controller
     public function preowned(){
         return view('pages.preowned');
     }
-
-    public function po_earrings(){
+    //These have moved to the ProductsController
+    /*public function po_earrings(){
         return view('pages.po-earrings');
     }
 
@@ -30,9 +30,9 @@ class PagesController extends Controller
         return view('pages.po-necklaces');
     }
 
-    /*public function po_bracelets(){
+    public function po_bracelets(){
         return view('pages.po-bracelets');
-    }*/
+    }
 
     public function po_rings(){
         return view('pages.po-rings');
@@ -48,7 +48,7 @@ class PagesController extends Controller
 
     public function finds(){
         return view('pages.finds');
-    }
+    }*/
 
     public function cart(){
         return view('pages.cart');
@@ -56,10 +56,5 @@ class PagesController extends Controller
 
     public function members(){
         return view('pages.members');
-    }
-
-    /*public function register(){
-        return view('pages.register');
-    }*/
-    
+    }    
 }

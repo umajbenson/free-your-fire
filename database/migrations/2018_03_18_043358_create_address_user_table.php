@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrdersOrdTable extends Migration
+class CreateAddressUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateOrdersOrdTable extends Migration
      */
     public function up()
     {
-        //Schema::dropIfExists('orders_ord');
-        Schema::create('orders_ord', function (Blueprint $table) {
-            $table->increments('id_ord');
+        Schema::create('address_user', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->datetime('ship_date_ord');
-            $table->decimal('shipping_charge_ord', 5, 2);
+            $table->integer('address_id')->unsigned();
+            $table->foreign('address_id')->references('id')->on('addresses');
+            $table->string('address_type');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateOrdersOrdTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders_ord');
+        Schema::dropIfExists('address_user');
     }
 }

@@ -8,17 +8,17 @@
     <link href="https://fonts.googleapis.com/css?family=Karma|Michroma|Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Andika|Athiti|Barlow+Semi+Condensed|Courgette|Cuprum|Englebert|Magra|Marvel|Maven+Pro|Montserrat|Open+Sans+Condensed:300|Philosopher|Sansita|Ubuntu+Condensed" rel="stylesheet">
     <!-- CSS links -->
-    <link href="js/jquery-ui.min.css" rel="stylesheet">
-    <link href="smartmenus/sm-core-css.css" rel="stylesheet">
-    <link href="smartmenus/sm-mint.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
+    <link href="/js/jquery-ui.min.css" rel="stylesheet">
+    <link href="/smartmenus/sm-core-css.css" rel="stylesheet">
+    <link href="/smartmenus/sm-mint.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="/stylesheet" href="{{asset('css/custom.css')}}">
 
     <!-- jQuery links -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="smartmenus/jquery.smartmenus.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/freeyourfire.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/smartmenus/jquery.smartmenus.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/freeyourfire.js"></script>
 
     <title>@yield('title')</title>
     
@@ -41,7 +41,12 @@
     
     <div id="main-wrapper"> 
         <h2 class="product-h2">@yield('h2')</h2>
+        @isset($msg)
+        
+                <p>!!!!!!!!</p>
 
+         
+        @endisset
         @include('partials.filters')   
 
         @include('partials.sort')

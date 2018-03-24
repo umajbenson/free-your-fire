@@ -1,14 +1,15 @@
 @extends('layouts.products')
 
 @section('title')     
-    Free Your Fire - Pre-Owned Rings
+    Free Your Fire - Pre-Owned {{ $title }}
 @endsection
 
 
- @section('image')     
-    <img id="shop-image" src="images/rings-crop2.jpg">
- @endsection
+@section('image')     
+    <img id="shop-image" src="{{ $image }}">
+    
+@endsection
      
- @section('h2')
-    Pre-owned Rings
- @endsection
+@section('h2')
+    Pre-Owned {{ $h2 }}
+@endsection

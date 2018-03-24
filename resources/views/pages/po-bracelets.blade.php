@@ -6,7 +6,7 @@
 
 
  @section('image')     
-    <img id="shop-image" src="images/bracelet-crop.jpg">
+    <img id="shop-image" src="/images/bracelet-crop.jpg">
  @endsection
      
  @section('h2')
