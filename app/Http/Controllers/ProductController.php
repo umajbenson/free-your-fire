@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use App\Http\Requests;
+use Session;
 
 class ProductController extends Controller
 {
@@ -15,12 +18,12 @@ class ProductController extends Controller
         return view('pages.po-bracelets', ['products' => $products]);
     }*/
 
-    public function show($id){
+    public function show($slug){
         
-        $category = Category::where('id', $id)->first();
+        $category = Category::where('slug', $slug)->first();
 
         if ($category) {
-            $products = Product::where('category_id', $id)->get();
+            $products = Product::where('category_id', $category->id)->get();
             $image = $category->image_path; 
             $title = $category->name;
             $h2 = $category->name;
@@ -36,6 +39,19 @@ class ProductController extends Controller
 
     }
 
+    public function getCart(Request $request, $id) {
+        $product = Product::find($id);
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->add($product, $product->id);
+
+        $request->session()->put('cart', $cart);
+        dd($request->session()->get('cart'));
+        return redirect()->route('pages.index');
+    }
+
+   
+   
     public function po_bracelets(){
         $products = Product::where('id', '3')->get();
         return view('pages.po-bracelets', ['products' => $products]);

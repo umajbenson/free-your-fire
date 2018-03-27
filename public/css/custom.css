@@ -60,6 +60,10 @@ h1 {
     padding-top: 50px;
 }
 
+h1 a {
+    color: #525252; 
+}
+
 header h2 {
     text-align: center;
     font-family: "montserrat";

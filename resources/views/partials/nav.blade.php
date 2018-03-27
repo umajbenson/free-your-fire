@@ -14,19 +14,22 @@
         </li>
         <li><a href="/preowned">Pre-owned Jewelry</a>
             <ul>
-                <li><a href="/show/1">Earrings</a></li>
-                <li><a href="/show/2">Necklaces</a></li>
-                <li><a href="/show/3">Bracelets</a></li>
-                <li><a href="/show/4">Rings</a></li>
-                <li><a href="/show/5">Brooches</a></li>
-                <li><a href="/show/6">Jewelry Sets</a></li>
+                <li><a href="/show/pre-owned-earrings">Earrings</a></li>
+                <li><a href="/show/pre-owned-necklaces">Necklaces</a></li>
+                <li><a href="/show/pre-owned-bracelets">Bracelets</a></li>
+                <li><a href="/show/pre-owned-rings">Rings</a></li>
+                <li><a href="/show/pre-owned-brooches">Brooches</a></li>
+                <li><a href="/show/pre-owned-sets">Jewelry Sets</a></li>
             </ul> 
         </li>
-        <li><a href="/show/7">$5 Finds</a></li>
+        <li><a href="/show/five-dollar">$5 Finds</a></li>
+        @if(Auth::user())
         <li><a href="/members">Members Area</a></li>
-        
+    <li class="right-links"><a href="/logout">Logout</a></li>
+        @else
         <li class="right-links"><a href="/register">Register</a></li>
         <li class="right-links"><a href="/login">Login</a></li>
+        @endif
         <li class="right-links"><a href="/cart"><span id="cart"><img src="/images/if_shopping-cart-small.png" width=20></span> Cart</a> </li>
     </ul>
 </nav>

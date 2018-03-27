@@ -4,7 +4,6 @@
     Free Your Fire - Pre-Owned {{ $title }}
 @endsection
 
-
 @section('image')     
     <img id="shop-image" src="{{ $image }}">
     

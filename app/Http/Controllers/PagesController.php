@@ -21,34 +21,6 @@ class PagesController extends Controller
     public function preowned(){
         return view('pages.preowned');
     }
-    //These have moved to the ProductsController
-    /*public function po_earrings(){
-        return view('pages.po-earrings');
-    }
-
-    public function po_necklaces(){
-        return view('pages.po-necklaces');
-    }
-
-    public function po_bracelets(){
-        return view('pages.po-bracelets');
-    }
-
-    public function po_rings(){
-        return view('pages.po-rings');
-    }
-
-    public function po_brooches(){
-        return view('pages.po-brooches');
-    }
-
-    public function po_sets(){
-        return view('pages.po-sets');
-    }
-
-    public function finds(){
-        return view('pages.finds');
-    }*/
 
     public function cart(){
         return view('pages.cart');

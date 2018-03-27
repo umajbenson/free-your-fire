@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class AdminController extends Controller
 {
@@ -13,7 +14,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:admin');
+        //$this->middleware('auth:admin');
     }
 
     /**
@@ -23,6 +24,19 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('user.admin');
+       $users = User::all();
+       //dd($users);
+        return view('admin.index')->with(compact('users'));
+    }
+
+    public function deleteUser($id)
+    {
+        $user = User::where('id', $id)->first();
+        $delete = User::destroy($id);
+
+        if ($delete) {
+            return back();
+        }
+        dd($user);
     }
 }

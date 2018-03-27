@@ -28,11 +28,17 @@
 <div id="wrapper">
 <header>
     <div> 
-        <h1>Free your Fire</h1>
+        <h1><a href="/">Free your Fire</a></h1>
         <h2>Asheville, North Carolina</h2>
     </div>
     
+   
+@if(!isset($admin))    
     @include('partials.nav')
+
+@else
+    @include('partials.admin_nav')
+@endif
 
 </header> 
 

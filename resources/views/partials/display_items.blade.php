@@ -6,7 +6,7 @@
                 
                 <p id="price">${{ $product->price }}</p>
                 <p>{{ $product->name }}</p>
-                <button>Add To Cart</button>
+                <a href="{{ route('product.cart', ['id'=>$product->id]) }}">Add To Cart</a>
                 <!--<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="PDMQBULL82TE6">

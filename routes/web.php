@@ -16,7 +16,7 @@
     return view('welcome');
 });*/
 
-Route::get('/', 'PagesController@index');
+Route::get('/', 'PagesController@index')->name('pages.index');
 
 Route::get('/about', 'PagesController@about');
 
@@ -24,30 +24,20 @@ Route::get('/handmade', 'PagesController@handmade');
 
 Route::get('/preowned', 'PagesController@preowned');
 
-Route::get('show/{id}', 'ProductController@show');
-
-//Route::get('/po-earrings', 'ProductController@po_earrings');
-
-//Route::get('/po-necklaces', 'ProductController@po_necklaces');
-
-//Route::get('/po-bracelets', 'ProductController@po_bracelets');
-
-//Route::get('/po-rings', 'ProductController@po_rings');
-
-//Route::get('/po-brooches', 'ProductController@po_brooches');
-
-//Route::get('/po-sets', 'ProductController@po_sets');
-
-//Route::get('/finds', 'ProductController@finds');
+Route::get('/show/{slug}', 'ProductController@show');
 
 Route::get('/members', 'PagesController@members');
-
 
 Route::get('/cart', 'PagesController@cart');
 
 Route::get('/login', 'LoginController@login');
 
+Route::get('/logout', 'Auth\LoginController@logout');
+
 Route::get('/register', 'RegisterController@register');
+
+Route::get('/cart/{id}', 'ProductController@getCart')->name('product.cart');
+
 
 
 
@@ -57,13 +47,12 @@ Route::get('/register', 'RegisterController@register');
    // return view('products', compact('products'));
 });*/
 
-
-/*Route::get('/about', function () {
-    return view('pages.about');
-});*/
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin', 'AdminController@index')->name('admin');
+//Route::get('/admin', 'AdminController@index')->name('admin');
 
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
+    Route::get('/', 'AdminController@index');
+    Route::get('/delete-user/{id}', 'AdminController@deleteUser');
+});
