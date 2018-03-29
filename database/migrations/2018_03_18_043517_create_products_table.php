@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->integer('price');
             $table->string('image_path');
-                     
+            $table->string('paypal_button');                
             $table->decimal('weight', 4, 2)->nullable();
             $table->boolean('is_vintage');
             $table->boolean('is_precious');

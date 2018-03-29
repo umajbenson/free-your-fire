@@ -39,20 +39,29 @@ class ProductController extends Controller
 
     }
 
-    public function getCart(Request $request, $id) {
+    /*public function getAddToCart(Request $request, $id) {
         $product = Product::find($id);
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
         $cart->add($product, $product->id);
 
         $request->session()->put('cart', $cart);
-        dd($request->session()->get('cart'));
-        return redirect()->route('pages.index');
+        //dd($request->session()->get('cart'));
+        return redirect()->route('pages.show');
     }
+
+    public function getCart() {
+        if (!Session::has('cart')) {
+            return view('pages.cart');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('pages.cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]); 
+    }*/
 
    
    
-    public function po_bracelets(){
+    /*public function po_bracelets(){
         $products = Product::where('id', '3')->get();
         return view('pages.po-bracelets', ['products' => $products]);
     }
@@ -85,5 +94,5 @@ class ProductController extends Controller
     public function finds(){
         $products = Product::where('id', '7')->get();
         return view('pages.finds', ['products' => $products]);
-    }
+    }*/
 }

@@ -24,7 +24,7 @@ Route::get('/handmade', 'PagesController@handmade');
 
 Route::get('/preowned', 'PagesController@preowned');
 
-Route::get('/show/{slug}', 'ProductController@show');
+Route::get('/show/{slug}', 'ProductController@show')->name('pages.show');
 
 Route::get('/members', 'PagesController@members');
 
@@ -36,7 +36,9 @@ Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::get('/register', 'RegisterController@register');
 
-Route::get('/cart/{id}', 'ProductController@getCart')->name('product.cart');
+Route::get('/add-to-cart/{id}', 'ProductController@getAddToCart')->name('product.addToCart');
+
+Route::get('/cart/{id}', 'ProductController@getAddToCart')->name('product.cart');
 
 
 

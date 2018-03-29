@@ -11,6 +11,7 @@
     <link href="js/jquery-ui.min.css" rel="stylesheet">
     <link href="smartmenus/sm-core-css.css" rel="stylesheet">
     <link href="smartmenus/sm-mint.css" rel="stylesheet">
+    <!--<link href="css/app.css" rel="stylesheet">-->
     <link href="css/custom.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
 

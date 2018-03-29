@@ -74,8 +74,7 @@ header h2 {
     padding-bottom: 30px;
     /*font-weight: 600;*/
     text-transform: lowercase;
-    /*border: 1px solid red;*/
-    
+    /*border: 1px solid red;*/   
 }
 #main-nav {
     max-width: 1520px;
@@ -85,7 +84,8 @@ header h2 {
     vertical-align: middle; 
 }*/
 #cart {
-  /*vertical-align: -3px; */
+  position: relative;
+  top:-3px;
 }
 #hero {
    /* max-width: 100%;
