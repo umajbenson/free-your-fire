@@ -8,6 +8,6 @@
     Member Area
 @endsection
 
-@section('p')
+@section('content')
     <p>This page is for members only</p>
 @endsection

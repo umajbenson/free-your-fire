@@ -2,6 +2,7 @@
     font-family: "antro vectra";
     src: url("../fonts/antro_vectra.otf");
 }
+
 @font-face {
     font-family: "oh samantha";
     src: url("../fonts/oh-samantha demo.ttf");
@@ -10,52 +11,25 @@
 * {
     margin: 0;
     padding: 0;
-    /*border: 0;*/
-    /*outline: 0;*/
-    /*vertical-align: baseline;*/
     text-decoration: none;
 }
+
 body {
     /*background: #ccc;*/
     /*background-image: url("../images/roses-bg.jpg");*/
    /* background-image: url('../images/backgrounds/stars-bg.jpg');*/
    /* max-width: 100%;*/
 }
+
 #wrapper {
     max-width: 1520px;
-   
-    /*max-width: 100%;*/
     margin: 0 auto;
     background: #fffeff;
-    
-    /*border: 1px solid green;*/
-}
-
-#main-wrapper {
-    max-width: 1170px;
-    margin: 0 auto;
-    background: white;
-    /*display: flex;*/
-   /* border: 1px solid red;*/
-}
-main {
-    max-width: 100%;
-    /*background: #fffff9;*/
-    /*background-image: url("../images/sun-bg.jpg");*/
-    /*filter: opacity(.2);*/
-    /*border: 1px solid red;*/
 }
 
 h1 { 
-    /*font-family: "antro vectra";*/
     font-family: "antro vectra";
-    
-    /*text-transform: lowercase;*/
-    /*font-weight: 400;*/
     font-size: 70px;
-    /*line-height: 1;*/
-    /*color: #736B5F;*/
-    color: #525252;
     text-align: center;
     padding-top: 50px;
 }
@@ -65,6 +39,7 @@ h1 a {
 }
 
 header h2 {
+    /* asheville, north carolina */
     text-align: center;
     font-family: "montserrat";
     letter-spacing: 7px;
@@ -72,93 +47,182 @@ header h2 {
     color: #736B5F;
     font-size: 12px;
     padding-bottom: 30px;
-    /*font-weight: 600;*/
-    text-transform: lowercase;
-    /*border: 1px solid red;*/   
+    text-transform: lowercase;   
 }
+
 #main-nav {
     max-width: 1520px;
-    /*padding-top: 30px;*/
 }
-/*#main-nav img {
-    vertical-align: middle; 
-}*/
-#cart {
+
+/*#cart {
   position: relative;
   top:-3px;
+}*/
+
+#view-cart {
+    position: relative;
+    top: 7px; 
 }
+
+main {
+    max-width: 100%; /* contains the hero image */
+    /*background: #fffff9;*/
+    /*background-image: url("../images/sun-bg.jpg");*/
+    /*filter: opacity(.2);*/
+    /*border: 1px solid red;*/
+}
+
 #hero {
-   /* max-width: 100%;
-    height: auto;*/
-    width: 100%;
-}
-#shop-image {
     width: 100%;
     height: auto;
-    /*filter: opacity(50%);*/
-    /*/border: 1px solid red;*/
 }
+
+#content-wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    background: #fffeff;
+    text-align: center;
+    font-family: montserrat;
+}
+
 main h2 {
-    /*text-align: center;*/
-    /*background: #fff;
-    transform: rotate(-17deg);*/
     font-family: "courgette";
     font-size: 35px;
     font-weight: normal;
-    /*margin-top: 0;*/
     color: #525252;
-    /*letter-spacing: 2px;*/
+    letter-spacing: 1px;
     padding: 30px 0;
 }
-.product-h2 {
-    text-align: center;
+
+#master-h2 {
+    text-align: left;
 }
 
-.row {
-    display: flex;
-    flex-flow: row nowrap;
-    /*justify-content: space-around;*/
-    /*padding: .5vw;*/
+input[type="checkbox"] {
+    margin-right: 20px;
 }
-.figure {
-  margin: 2%;
-  width: 29%;
-}
-.figure img {
-    width: 100%;
-    height: auto;
-}
-.figure p {
-   /* display: inline-block;*/
-    font-family: montserrat;
-    padding: 25px 15px 15px 15px;
-}
-#price {
-    float: right;
-}
-button {
-    display: block;
-    margin: 0 auto 40px auto;
+
+#apply-filters {
     font-family: montserrat;
     padding: 5px 10px;
+    display: block;
+    margin: 25px auto;
 }
-select {
+
+#sort {
     display: block;
     font-family: montserrat;
     padding: 5px 10px;
     margin: 0 auto 30px auto;
 }
 
-form {
-   
-    text-align: center;
-    font-family: montserrat;
-    margin-bottom: 40px;
-   
+/* Product images */
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
 }
 
-input {
-    margin-right: 20px;
+.figure {
+  margin: 2%;
+  width: 29%;
+  text-align: center;
+}
+
+.figure img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.figure p {
+    padding: 0 15px 15px 15px;
+}
+
+#paypal {
+    margin-bottom: 40px; 
+}
+
+/* Lightbox styles */
+
+#inline_content {
+  background-color: #262626; 
+}
+
+#lightbox {
+    display: none;   
+}
+
+#inline_content img {
+    float: left;
+    height: 600px;
+    margin-left: 40px;
+    margin-top: 40px;    
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#inline_content form {
+   text-align: left;
+}
+
+.lightbox-text {
+    width: 400px;
+    color: #fffeff;
+    /*font-family: montserrat;*/
+    font-size: 20px;
+    padding: 60px 40px 0 550px;
+}
+
+.lightbox-text p {
+    margin-bottom: 28px;
+}
+
+#lightbox-name {
+    font-family: courgette;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.align-left {
+    text-align: left;
+}
+
+/* Table styles - users-index page */
+
+table {
+    border-spacing: 0;
+}
+
+td {
+    color: #262626;
+}
+
+td, th {
+    text-align: left;
+    padding: 10px;  
+}
+
+td a {
+    font-style: italic;
+    color: #262626;
+}
+
+td a:hover {
+    color: #87A972;
+}
+
+tr:nth-of-type(odd) {
+    background-color: #f5f5f5;
+}
+
+tr:first-of-type {
+    background-color: #262626;
+    color: #fffeff; 
 }
 
 

@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')     
+    Free Your Fire - Login Page
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -55,7 +59,7 @@
                                     Login
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="btn btn-link" href="{{ route('reset-password') }}">
                                     Forgot Your Password?
                                 </a>
                             </div>

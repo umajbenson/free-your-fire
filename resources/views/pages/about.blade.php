@@ -8,6 +8,6 @@
     About
 @endsection
 
-@section('p')
+@section('content')
     <p>This page tells all about us</p>
 @endsection

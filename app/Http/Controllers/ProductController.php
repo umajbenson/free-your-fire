@@ -24,15 +24,14 @@ class ProductController extends Controller
 
         if ($category) {
             $products = Product::where('category_id', $category->id)->get();
-            $image = $category->image_path; 
-            $title = $category->name;
-            $h2 = $category->name;
+            $image = $category->image_path;           
+            $category = $category->name;
             //dd($category);
             return view('pages.show')
                 ->with(compact('products'))
-                ->with(compact('title'))
+                
                 ->with(compact('image'))
-                ->with(compact('h2'));
+                ->with(compact('category'));
         }
         
         return redirect()->back()->with('msg', 'No Category found.');

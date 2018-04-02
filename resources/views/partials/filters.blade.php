@@ -12,6 +12,6 @@
     <input type="checkbox" name="filters" id="rhinestone" value="1">
     <label for="other">Other</label>
     <input type="checkbox" name="filters" id="other" value="1">
-</form>
 
-    <button>Apply Filters</button>
+    <button id="apply-filters">Apply Filters</button>
+</form>

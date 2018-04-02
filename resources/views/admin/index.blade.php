@@ -4,10 +4,7 @@
     Admin Page
 @endsection
 
-@section('p')
-    @foreach($users as $user)
-        @if($user->id != Auth::user()->id)
-            <p>{{ $user->name }} | {{ $user->email }} | {{ Carbon\Carbon::parse($user->created_at)->format('m/d/Y') }} <a href="/admin/delete-user/{{ $user->id }}">DELETE THIS USER</a></p>
-        @endif
-    @endforeach
+@section('content')
+    <a href="/admin/users">Users</a>
+    <a href="/admin/products">Products</a>
 @endsection

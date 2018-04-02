@@ -11,16 +11,26 @@
     <link href="/js/jquery-ui.min.css" rel="stylesheet">
     <link href="/smartmenus/sm-core-css.css" rel="stylesheet">
     <link href="/smartmenus/sm-mint.css" rel="stylesheet">
+    <link href="/css/colorbox.css" rel="stylesheet">
+    
     <link href="/css/custom.css" rel="stylesheet">
     <link rel="/stylesheet" href="{{asset('css/custom.css')}}">
 
     <!-- jQuery links -->
     <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery.colorbox-min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $(".inline").colorbox({inline:true, width:"100%"});
+        });
+	</script>
+    
     <script src="/smartmenus/jquery.smartmenus.min.js"></script>
     <script src="/js/jquery-ui.min.js"></script>
     <script src="/js/freeyourfire.js"></script>
 
-    <title>@yield('title')</title>
+    <title>@yield('category-title')</title>
     
 </head>
 
@@ -40,10 +50,8 @@
 <main>
     @yield('image')
     
-    <div id="main-wrapper"> 
-        <h2 class="product-h2">@yield('h2')</h2>
-
-      
+    <div id="content-wrapper"> 
+        <h2 id="product-h2">@yield('category-h2')</h2>
 
         @include('partials.filters')   
 

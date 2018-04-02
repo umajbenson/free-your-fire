@@ -49,6 +49,8 @@ Route::get('/cart/{id}', 'ProductController@getAddToCart')->name('product.cart')
    // return view('products', compact('products'));
 });*/
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -57,4 +59,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('/', 'AdminController@index');
     Route::get('/delete-user/{id}', 'AdminController@deleteUser');
+    Route::get('/users', 'AdminController@usersIndex');
+    Route::get('/users/edit/{id}', 'AdminController@editUser')->name('users-edit'); 
+    Route::post('/users/edit/{id}', 'AdminController@updateUser');
+});
+
+Route::group(['prefix' => 'auth', 'middleware' => 'guest'], function() {
+    Route::get('/password/reset', 'Auth\ForgotPasswordController@requestForm')->name('reset-password');
+    Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('reset-email');
+    Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+    Route::post('/password/reset/', 'Auth\ResetPasswordController@reset');
 });

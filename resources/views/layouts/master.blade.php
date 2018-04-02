@@ -32,25 +32,22 @@
         <h1><a href="/">Free your Fire</a></h1>
         <h2>Asheville, North Carolina</h2>
     </div>
-    
-   
-@if(!isset($admin))    
-    @include('partials.nav')
-
-@else
-    @include('partials.admin_nav')
-@endif
-
+       
+    @if(!isset($admin))    
+        @include('partials.nav')
+    @else
+        @include('partials.admin_nav')
+    @endif
 </header> 
 
 <main>
     @yield('image')
     
-    <div id="main-wrapper">
+    <div id="content-wrapper">
 
-        <h2>@yield('h2')</h2>
-        <p>@yield('p')</p>
-</div> <!-- end #main-wrapper -->
+        <h2 id="master-h2">@yield('h2')</h2>
+        @yield('content')
+    </div> <!-- end #content-wrapper -->
 </main>
 <footer>
 
