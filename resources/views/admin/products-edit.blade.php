@@ -1,11 +1,11 @@
 @extends('layouts.master', ['admin' => true])
 
 @section('title')
-    Free Your Fire - User Edit
+    Free Your Fire - Products Edit
 @endsection
 
 @section('h2')
-    Edit Registered Users
+    Edit Products
 @endsection
 
 @section('image')
@@ -48,7 +48,7 @@
     <div>
     {!! Form::label('role_id', 'Role', ['class' => 'label']) !!}
 
-    {!! Form::select('role_id', $rolesArray, isset($user) ? $user->role_id : 1, ['class' => 'select']) !!}
+    {!! Form::select('role_id', $rolesArray, isset($user) ? $user->role_id : 1) !!}
     </div>
 
     <br>

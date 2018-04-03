@@ -1,7 +1,15 @@
 @extends('layouts.master', ['admin' => true])
 
+@section('title')
+    Free Your Fire - User List
+@endsection
+
 @section('h2')
     Registered Users
+@endsection
+
+@section('image')
+    <img src="/images/backgrounds/stars-bg-crop.jpg">
 @endsection
 
 @section('content')
@@ -22,8 +30,8 @@
         <tr>
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
-            <td>{{ $user->is_admin }}</td>
-            <td>{{ $user->is_active }}</td>
+            <td>{{ $user->is_admin == true ? 'Yes' : 'No' }}</td>
+            <td>{{ $user->is_active == true ? 'Yes' : 'No' }}</td>
             <td>{{ Carbon::parse($user->created_at)->format('m/d/Y') }}</td>
             <td>{{ Carbon::parse($user->updated_at)->format('m/d/Y') }}</td>
             <td><a href="/admin/users/edit/{{ $user->id }}">Edit this user</a></td>

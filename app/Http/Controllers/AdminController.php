@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Role;
 use App\User;
+use App\Models\Product;
 
 class AdminController extends Controller
 {
@@ -25,7 +26,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-    
         return view('admin.index');
     }
 
@@ -38,8 +38,9 @@ class AdminController extends Controller
     public function usersIndex()
     {
     $users = User::all();
+    $products = Product::all();
     //dd($users);
-        return view('admin.users-index')->with(compact('users'));
+        return view('admin.users-index')->with(compact('users'))->with(compact('products'));
     }
 
     public function deleteUser($id)
@@ -69,6 +70,30 @@ class AdminController extends Controller
     {
         $user = User::where('id', $id)->first();
         $update = $user->update($request->except('_token'));
+
+        if($update) {
+            return back()->with('message', 'Successfully Updated');
+        }
+        dd($request);
+    }
+
+    public function productsIndex()
+    {
+        $products = Product::all();
+         //dd($products);
+        return view('admin.products-index')->with(compact('products'));
+    }
+
+    public function editProduct($id) {
+        $product = Product::where('id', $id)->first();
+
+        return view('admin.products-edit')->with(compact('product'));
+    }
+
+    public function updateProduct($id, Request $request)
+    {
+        $product = Product::where('id', $id)->first();
+        $update = $product->update($request->except('_token'));
 
         if($update) {
             return back()->with('message', 'Successfully Updated');

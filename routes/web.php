@@ -40,6 +40,10 @@ Route::get('/add-to-cart/{id}', 'ProductController@getAddToCart')->name('product
 
 Route::get('/cart/{id}', 'ProductController@getAddToCart')->name('product.cart');
 
+Route::get('/edit-profile', 'UserController@getProfile');
+
+Route::post('/edit-profile', 'UserController@updateProfile');
+
 
 
 
@@ -62,6 +66,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('/users', 'AdminController@usersIndex');
     Route::get('/users/edit/{id}', 'AdminController@editUser')->name('users-edit'); 
     Route::post('/users/edit/{id}', 'AdminController@updateUser');
+    Route::get('/products', 'AdminController@productsIndex');
+    Route::get('/products/edit/{id}', 'AdminController@editProduct')->name('products-edit');
+    Route::post('/products/edit/{id}', 'AdminController@updateProduct'); 
+    
 });
 
 Route::group(['prefix' => 'auth', 'middleware' => 'guest'], function() {

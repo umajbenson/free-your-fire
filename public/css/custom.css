@@ -25,6 +25,7 @@ body {
     max-width: 1520px;
     margin: 0 auto;
     background: #fffeff;
+    color: #525252;
 }
 
 h1 { 
@@ -34,7 +35,7 @@ h1 {
     padding-top: 50px;
 }
 
-h1 a {
+a {
     color: #525252; 
 }
 
@@ -52,6 +53,14 @@ header h2 {
 
 #main-nav {
     max-width: 1520px;
+}
+
+#admin-nav {
+    max-width: 1520px;
+    /*height: 175px;
+    background-image: url("../images/backgrounds/stars-bg-crop.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;*/
 }
 
 /*#cart {
@@ -77,12 +86,16 @@ main {
     height: auto;
 }
 
-#content-wrapper {
+#content-wrapper, #master-wrapper {
     max-width: 1170px;
     margin: 0 auto;
-    background: #fffeff;
-    text-align: center;
+    background: #fffeff;    
     font-family: montserrat;
+    padding-bottom: 80px;
+}
+
+#content-wrapper {
+    text-align: center;
 }
 
 main h2 {
@@ -94,9 +107,9 @@ main h2 {
     padding: 30px 0;
 }
 
-#master-h2 {
+/*#master-h2 {
     text-align: left;
-}
+}*/
 
 input[type="checkbox"] {
     margin-right: 20px;
@@ -188,14 +201,23 @@ input[type="checkbox"] {
     margin-bottom: 20px;
 }
 
-.align-left {
-    text-align: left;
+/* Admin Pages */
+
+.admin-links {
+    display: block;
+    color: #525252;
+    margin-bottom: 20px;
+}
+
+a.admin-links:hover {
+    color: #87A972;
 }
 
 /* Table styles - users-index page */
 
 table {
     border-spacing: 0;
+    margin-bottom: 80px;
 }
 
 td {
@@ -217,12 +239,49 @@ td a:hover {
 }
 
 tr:nth-of-type(odd) {
-    background-color: #f5f5f5;
+    background-color: #ECE1B1;
 }
 
 tr:first-of-type {
-    background-color: #262626;
+    /*background-color: #262626;*/
+    background-color: #68644F;
     color: #fffeff; 
+}
+
+/* User Edit Page */
+
+.label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 15px;
+    vertical-align: top;
+}
+
+.user-edit-submit {
+    margin-left: 120px;
+    padding: 5px 10px;
+    font-size: 1em;
+    font-family: montserrat;
+    background: rgb(181,163,82);
+    background: linear-gradient(to bottom, rgba(236,225,177,1) 40%, rgba(181,163,82,1));
+    border-radius: 5px;
+    box-shadow: 0 0 4px #fffeff;
+    margin-bottom: 20px;
+    color: #525252;
+}
+
+.text-field {
+    border-radius: 5px; 
+    box-shadow: inset 0 0 10px rgba(255,255,255,.75);
+    width: 300px;
+    padding: 5px;
+    color: #525252;
+}
+
+.select {
+    width: 120px;
+    color: #525252;
 }
 
 

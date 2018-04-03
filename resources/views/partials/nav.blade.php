@@ -26,6 +26,10 @@
         @if(Auth::user())
         <li><a href="/members">Members Area</a></li>
         <li class="right-links"><a href="/logout">Logout</a></li>
+        <li class="right-links"><a href="/edit-profile">Welcome, {{ Auth::user()->name }}!</a></li>
+        @if(Auth::user()->is_admin == true)
+            <li class="right-links"><a href="/admin">Admin</a></li>
+        @endif
         @else
         <li class="right-links"><a href="/register">Register</a></li>
         <li class="right-links"><a href="/login">Login</a></li>
