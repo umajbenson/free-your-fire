@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Role;
+use App\Models\Category;
 use App\User;
 use App\Models\Product;
 
@@ -43,16 +44,10 @@ class AdminController extends Controller
         return view('admin.users-index')->with(compact('users'))->with(compact('products'));
     }
 
-    public function deleteUser($id)
-    {
-        $user = User::where('id', $id)->first();
-        $delete = User::destroy($id);
+    
 
-        if ($delete) {
-            return back();
-        }
-        dd($user);
-    }
+    
+
 
     public function editUser($id) {
         $user = User::where('id', $id)->first();
@@ -77,6 +72,17 @@ class AdminController extends Controller
         dd($request);
     }
 
+    public function deleteUser($id)
+    {
+        $user = User::where('id', $id)->first();
+        $delete = User::destroy($id);
+
+        if ($delete) {
+            return back();
+        }
+        dd($user);
+    }
+
     public function productsIndex()
     {
         $products = Product::all();
@@ -84,10 +90,18 @@ class AdminController extends Controller
         return view('admin.products-index')->with(compact('products'));
     }
 
+
+
     public function editProduct($id) {
         $product = Product::where('id', $id)->first();
+        $categoriesArray = [];
+        $categories = Category::all();
 
-        return view('admin.products-edit')->with(compact('product'));
+        foreach($categories as $category) {
+        $categoriesArray = $categoriesArray + [$category->id => $category->name];
+        }
+
+        return view('admin.products-edit')->with(compact('product'))->with(compact('categoriesArray'));
     }
 
     public function updateProduct($id, Request $request)
@@ -99,5 +113,16 @@ class AdminController extends Controller
             return back()->with('message', 'Successfully Updated');
         }
         dd($request);
+    }
+   
+    public function deleteProduct($id)
+    {
+        $product = Product::where('id', $id)->first();
+        $delete = Product::destroy($id);
+
+        if ($delete) {
+            return back();
+        }
+       // dd($product);
     }
 }

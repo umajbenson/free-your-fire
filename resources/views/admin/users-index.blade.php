@@ -5,11 +5,11 @@
 @endsection
 
 @section('h2')
-    Registered Users
+    Members
 @endsection
 
 @section('image')
-    <img src="/images/backgrounds/stars-bg-crop.jpg">
+    <img src="/images/amethyst.jpg">
 @endsection
 
 @section('content')

@@ -108,7 +108,7 @@ header img {
 
 
 #admin-nav {
-    max-width: 1520px;
+    /*max-width: 1170px;*/
     
     
     /*height: 175px;
@@ -142,6 +142,7 @@ main {
     /*background-image: url("../images/sun-bg.jpg");*/
     /*filter: opacity(.2);*/
     /*border: 1px solid red;*/
+    padding-bottom: 30px;
 }
 
 #hero {
@@ -263,6 +264,17 @@ input[type="checkbox"] {
 
 /* Admin Pages */
 
+#admin-nav {
+    margin-left: -12px;
+}
+
+#admin-nav a {
+     font-family: montserrat;
+     text-transform: initial;
+     font-weight: bold;
+     letter-spacing: initial;
+}
+
 .admin-links {
     display: block;
     color: #525252;
@@ -275,8 +287,13 @@ a.admin-links:hover {
 
 /* Table styles - users-index page */
 
+table, th, td {
+    border: 1px solid #525252;
+    border-collapse: collapse;
+}
+
 table {
-    border-spacing: 0;
+    /*border-spacing: 0;*/
     margin-bottom: 80px;
 }
 
@@ -286,7 +303,7 @@ td {
 
 td, th {
     text-align: left;
-    padding: 10px;  
+    padding: 15px;  
 }
 
 td a {
@@ -298,34 +315,45 @@ td a:hover {
     color: #87A972;
 }
 
-tr:nth-of-type(odd) {
+/*tr:nth-of-type(odd) {
     background-color: #ECE1B1;
-}
+}*/
 
-tr:first-of-type {
+/*tr:first-of-type {
     /*background-color: #262626;*/
-    background-color: #68644F;
+    /*background-color: #68644F;
     color: #fffeff; 
+}*/
+
+/* User and Product Edit Pages */
+
+
+
+#product-edit-form-div {
+    border: 1px solid #525252;
+    margin-bottom: 20px;
+    padding: 40px 20px;
 }
 
-/* User Edit Page */
-
-main {
-    padding-bottom: 30px;
+.label, .select-label{
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 15px;
+    
+    font-size: 16px;
+    font-weight: bold;   
 }
 
 .label {
-    display: inline-block;
-    width: 130px;
-    text-align: right;
-    margin-right: 15px;
     vertical-align: top;
-    font-size: 16px;
+    position: relative;
+    top: 10px;
 }
 
-.form-submit {
+.form-submit, .delete-submit {
     /*margin-left: 120px;*/
-    margin-left: 145px;
+    margin-left: 130px;
     padding: 5px 10px;
     font-size: 1em;
     font-family: montserrat;
@@ -333,8 +361,14 @@ main {
     background: linear-gradient(to bottom, rgba(236,225,177,1) 40%, rgba(181,163,82,1));
     border-radius: 5px;
     box-shadow: 0 0 4px #fffeff;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    margin-top: 20px;
     color: #525252;
+}
+
+.delete-submit {
+    margin-left: 85px;
+    margin-bottom: 20px;
 }
 
 #profile-submit {
@@ -347,11 +381,15 @@ main {
     width: 300px;
     padding: 10px;
     color: #525252;
+    font-family: montserrat;
+    font-size: 16px;
 }
 
 .select {
     width: 120px;
     color: #525252;
+    font-family: montserrat;
+    font-size: 16px;
 }
 
 /* Footer Styles */
@@ -368,7 +406,7 @@ hr {
     margin: 0 auto;
     font-family: montserrat; 
 
-    padding-bottom: 40px;
+    padding-bottom: 80px;
 }
 
 footer div {

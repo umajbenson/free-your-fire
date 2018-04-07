@@ -5,7 +5,7 @@
 @endsection
 
 @section('image')
-    <img src="/images/backgrounds/stars-bg-crop.jpg">
+    <img src="/images/amethyst.jpg">
 @endsection
 
 @section('h2')     

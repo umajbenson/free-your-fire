@@ -63,6 +63,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('/', 'AdminController@index');
     Route::get('/delete-user/{id}', 'AdminController@deleteUser');
+    Route::get('/delete-product/{id}', 'AdminController@deleteProduct');
+    
     Route::get('/users', 'AdminController@usersIndex');
     Route::get('/users/edit/{id}', 'AdminController@editUser')->name('users-edit'); 
     Route::post('/users/edit/{id}', 'AdminController@updateUser');

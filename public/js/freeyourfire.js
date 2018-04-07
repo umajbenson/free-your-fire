@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $('#main-nav ul').smartmenus();
     $('#user-nav ul').smartmenus();
+    $('#admin-nav ul').smartmenus();
     
     
    /* $("input[type=checkbox]").checkboxradio();*/
@@ -12,5 +13,14 @@ $(document).ready(function() {
             if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
             $(this).addClass("current");
     });
+
+   
+	$(function() {
+		$('#main-nav ul').smartmenus({
+			subMenusSubOffsetX: 6,
+			subMenusSubOffsetY: -8
+		});
+	});
+
    
 });
