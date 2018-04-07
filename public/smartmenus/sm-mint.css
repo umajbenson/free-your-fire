@@ -30,7 +30,10 @@
   /*padding: 0 15px;*/
 }
 .sm-mint a.current {
-  font-weight: bold; 
+  /*font-weight: bold;*/
+  /*background: #e7e7e7;*/
+  /*color: #fff;*/
+  
 }
 .sm-mint a.disabled {
   color: #cccccc;
@@ -142,7 +145,7 @@
     font-size: 18px;
     letter-spacing: 2px;
     /*padding: 11px 20px;*/
-    padding: 11px 20px;
+    padding: 11px 17px;
     /*color: #333;*/
     color: #736B5F;
     border-radius: 4px 4px 0 0;
@@ -155,9 +158,9 @@
   }
   
   /* Add style to separate login anchors */
-  .sm-mint .right-links {
+  /*.sm-mint .right-links {
     float: right ;
-}
+}*/
   .sm-mint a.highlighted {
     /*removed green background*/
     /*background: #F6FFED;*/

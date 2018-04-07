@@ -22,16 +22,12 @@
     <script src="/js/freeyourfire.js"></script>
 
     <title>@yield('title')</title> 
-
 </head>
 
 <body>
 <div id="wrapper">
 <header>
-    <div> 
-        <h1><a href="/">Free your Fire</a></h1>
-        <h2>Asheville, North Carolina</h2>
-    </div>
+    @include('partials.header')
        
     @if(!isset($admin))    
         @include('partials.nav')
@@ -49,8 +45,10 @@
         @yield('content')
     </div> <!-- end #master-wrapper -->
 </main>
-<footer>
 
+<footer>
+    <hr>
+    @include('partials.footer')
 </footer>
 </div>
 </body>

@@ -53,10 +53,10 @@
 
     <br>
     <div>
-    {!! Form::submit('Update', ['class' => 'user-edit-submit']) !!}
+    {!! Form::submit('Update', ['class' => 'form-submit']) !!}
     </div>
 
     {!! Form::close() !!}
 
-    <a class="user-edit-submit" href="/admin/delete-user/{{ $user->id }}">Delete This User</a>
+    <a class="form-submit" href="/admin/delete-user/{{ $user->id }}">Delete This User</a>
 @endsection

@@ -18,24 +18,24 @@
     {!! Form::open() !!}
 
     <div>
-        {!! Form::label('name', 'Name') !!}
+        {!! Form::label('name', 'Name', ['class' => 'label']) !!}
 
-        {!! Form::text('name', old('name', Auth::user()->name), ['class' => 'add-classes-here']) !!}
+        {!! Form::text('name', old('name', Auth::user()->name), ['class' => 'text-field']) !!}
     </div>
     <br>
     <div>
-        {!! Form::label('email', 'Email') !!}
+        {!! Form::label('email', 'Email', ['class' => 'label']) !!}
 
-        {!! Form::text('email', old('email', Auth::user()->email)) !!}
+        {!! Form::text('email', old('email', Auth::user()->email), ['class' => 'text-field']) !!}
     </div>
     <br>
     <div>
-        {!! Form::label('phone', 'Phone Number') !!}
+        {!! Form::label('phone', 'Phone Number', ['class' => 'label']) !!}
 
-        {!! Form::text('phone', old('phone', Auth::user()->phone)) !!}
+        {!! Form::text('phone', old('phone', Auth::user()->phone), ['class' => 'text-field']) !!}
     </div>
     <div>
-        {!! Form::submit('Update Profile') !!}
+        {!! Form::submit('Update Profile', ['class' => 'form-submit', 'id' => "profile-submit"]) !!}
     </div>
 
 

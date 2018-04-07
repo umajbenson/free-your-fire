@@ -4,6 +4,10 @@
     Free Your Fire - About
 @endsection
 
+@section('image')
+    <img src="/images/backgrounds/stars-bg-crop.jpg" width="1520" height="175">
+@endsection
+
 @section('h2')     
     About
 @endsection

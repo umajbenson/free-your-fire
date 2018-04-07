@@ -26,51 +26,114 @@ body {
     margin: 0 auto;
     background: #fffeff;
     color: #525252;
-}
-
-h1 { 
-    font-family: "antro vectra";
-    font-size: 70px;
-    text-align: center;
-    padding-top: 50px;
+    padding-top: 15px;
 }
 
 a {
     color: #525252; 
 }
 
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex div {
+   /* width: 33%;*/
+    /*padding: 10px;*/
+    /*border: 1px solid red;*/
+    margin: 0 20px;
+}
+
+#branding {
+    text-align: center;
+    margin: -40px 0 40px 0;
+}
+
+h1 { 
+    font-family: "antro vectra";
+    font-size: 70px;
+}
+
 header h2 {
     /* asheville, north carolina */
-    text-align: center;
     font-family: "montserrat";
     letter-spacing: 7px;
-    /*color: #928F88;*/
     color: #736B5F;
     font-size: 12px;
-    padding-bottom: 30px;
-    text-transform: lowercase;   
+    text-transform: lowercase;
+    margin-top: -33px;   
+}
+
+header h3 {
+    font-family: montserrat;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+header img {
+    width: 35px;
+    filter: opacity(.7);
+    margin: 5px 5px 0 0;
+}
+
+#user-nav {
+    /*border: 1px solid red;*/
+}
+
+#user-nav a {
+    font-family: montserrat;
+    text-transform: none;
+    font-size: 16px;
+    letter-spacing: initial;
+}
+
+#user-nav li ul a {
+    font-size: 14px;
 }
 
 #main-nav {
     max-width: 1520px;
 }
 
+.main-nav-ul {
+    width: 885px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+}
+
+
+
+
 #admin-nav {
     max-width: 1520px;
+    
+    
     /*height: 175px;
     background-image: url("../images/backgrounds/stars-bg-crop.jpg");
     background-repeat: no-repeat;
     background-size: contain;*/
 }
 
+a.current {
+    font-weight: bold;
+    color: #525252;
+}
+
 /*#cart {
-  position: relative;
-  top:-3px;
+  position: fixed;
+  top: 70px;
+  right: 10px;
+
 }*/
 
 #view-cart {
-    position: relative;
-    top: 7px; 
+    position: relative; 
+    top: 10px;
+    right: 10px;
+    left: 20px; 
 }
 
 main {
@@ -91,7 +154,8 @@ main {
     margin: 0 auto;
     background: #fffeff;    
     font-family: montserrat;
-    padding-bottom: 80px;
+    font-size: 18px;
+    padding: 0 20px;
 }
 
 #content-wrapper {
@@ -100,7 +164,7 @@ main {
 
 main h2 {
     font-family: "courgette";
-    font-size: 35px;
+    font-size: 38px;
     font-weight: normal;
     color: #525252;
     letter-spacing: 1px;
@@ -137,7 +201,7 @@ input[type="checkbox"] {
 }
 
 .figure {
-  margin: 2%;
+  padding: 2%;
   width: 29%;
   text-align: center;
 }
@@ -158,37 +222,33 @@ input[type="checkbox"] {
 
 /* Lightbox styles */
 
-#inline_content {
-  background-color: #262626; 
-}
-
 #lightbox {
     display: none;   
 }
 
-#inline_content img {
-    float: left;
-    height: 600px;
-    margin-left: 40px;
-    margin-top: 40px;    
+#inline_content {
+  display: flex;
+  flex-flow: row;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+.lightbox-photo {
+    /*width: 30%;*/
+    /*height: auto;*/
+    padding: 40px;
+    width: 50%;
 }
 
-#inline_content form {
-   text-align: left;
+.lightbox-photo img {
+    width: 100%;
+    height: auto;    
 }
 
 .lightbox-text {
-    width: 400px;
-    color: #fffeff;
-    /*font-family: montserrat;*/
+    width: 50%;
+    color: #545454;
     font-size: 20px;
-    padding: 60px 40px 0 550px;
+    padding: 40px;
+    /*padding: 40px 40px 0 550px;*/
 }
 
 .lightbox-text p {
@@ -250,16 +310,22 @@ tr:first-of-type {
 
 /* User Edit Page */
 
+main {
+    padding-bottom: 30px;
+}
+
 .label {
     display: inline-block;
-    width: 100px;
+    width: 130px;
     text-align: right;
     margin-right: 15px;
     vertical-align: top;
+    font-size: 16px;
 }
 
-.user-edit-submit {
-    margin-left: 120px;
+.form-submit {
+    /*margin-left: 120px;*/
+    margin-left: 145px;
     padding: 5px 10px;
     font-size: 1em;
     font-family: montserrat;
@@ -271,11 +337,15 @@ tr:first-of-type {
     color: #525252;
 }
 
+#profile-submit {
+    margin-top: 20px;
+}
+
 .text-field {
     border-radius: 5px; 
     box-shadow: inset 0 0 10px rgba(255,255,255,.75);
     width: 300px;
-    padding: 5px;
+    padding: 10px;
     color: #525252;
 }
 
@@ -283,6 +353,40 @@ tr:first-of-type {
     width: 120px;
     color: #525252;
 }
+
+/* Footer Styles */
+
+hr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+    font-family: montserrat; 
+
+    padding-bottom: 40px;
+}
+
+footer div {
+    padding: 2%;
+    text-align: center;
+}
+
+footer img {
+   width: 50px;
+    filter: opacity(.7);
+    margin-right: 10px; 
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+
 
 
 @media only screen and (max-width: 686px) {

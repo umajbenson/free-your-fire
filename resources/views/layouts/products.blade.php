@@ -11,17 +11,16 @@
     <link href="/js/jquery-ui.min.css" rel="stylesheet">
     <link href="/smartmenus/sm-core-css.css" rel="stylesheet">
     <link href="/smartmenus/sm-mint.css" rel="stylesheet">
-    <link href="/css/colorbox.css" rel="stylesheet">
+    <link href="/colorbox/colorbox.css" rel="stylesheet">
     
     <link href="/css/custom.css" rel="stylesheet">
     <link rel="/stylesheet" href="{{asset('css/custom.css')}}">
 
     <!-- jQuery links -->
     <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/jquery.colorbox-min.js"></script>
+    <script src="/colorbox/jquery.colorbox-min.js"></script>
     <script>
-        $(document).ready(function(){
-            
+        $(document).ready(function(){      
             $(".inline").colorbox({inline:true, width:"100%"});
         });
 	</script>
@@ -37,14 +36,13 @@
 <body>
 <div id="wrapper">
 <header>
-    <div> 
-        <h1><a href="/">Free your Fire</a></h1>
-        
-        <h2>Asheville, North Carolina</h2>
-    </div>
+    @include('partials.header')
     
-    @include('partials.nav')
-
+    @if(!isset($admin))    
+        @include('partials.nav')
+    @else
+        @include('partials.admin-nav')
+    @endif
 </header> 
 
 <main>
@@ -59,10 +57,11 @@
 
         @include('partials.display_items')
     
-    </div> <!-- end #main-wrapper -->
+    </div> <!-- end #main-wrapper -->  
 </main>
+<hr>
 <footer>
-
+    @include('partials.footer')
 </footer>
 </div>
 </body>

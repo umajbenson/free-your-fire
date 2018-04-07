@@ -4,6 +4,10 @@
     Free Your Fire - Member Area
 @endsection
 
+@section('image')
+    <img src="/images/backgrounds/stars-bg-crop.jpg">
+@endsection
+
 @section('h2')     
     Member Area
 @endsection
