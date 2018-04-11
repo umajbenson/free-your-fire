@@ -12,7 +12,7 @@
                 <li><a href="hm-sets">Jewelry Sets</a></li>
             </ul>-->
         </li>
-        <li><a href="/preowned">Pre-owned Jewelry</a>
+        <li class="hover"><a href="/preowned">Pre-owned Jewelry</a>
             <ul>
                 <li><a href="/show/pre-owned-earrings">Earrings</a></li>
                 <li><a href="/show/pre-owned-necklaces">Necklaces</a></li>

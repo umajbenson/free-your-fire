@@ -115,6 +115,6 @@
 
         {!! Form::close() !!}
 
-        <a class="form-submit delete-submit" href="/admin/delete-product/{{ $product->id }}">Delete This Product</a>
+        <a class="form-submit delete-submit" href="/admin/delete-product/{{ $product->id }}" onclick="return confirm('Are you sure?')">Delete This Product</a>
     </div>
 @endsection

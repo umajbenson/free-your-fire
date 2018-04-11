@@ -18,21 +18,67 @@ class ProductController extends Controller
         return view('pages.po-bracelets', ['products' => $products]);
     }*/
 
-    public function show($slug){
-        
+    public function show($slug, Request $request)
+    {
         $category = Category::where('slug', $slug)->first();
+       
+        if (isset($request->sortby)) {
+            $image = $category->image_path;           ;
+            $products = collect([]);
+            $preciousMetals = Product::where('category_id', $category->id)->where('is_precious', true)->get();
+            //dd($preciousMetals);
+            $gemstones = Product::where('category_id', $category->id)->where('is_gemstone', true)->get();
+            //dd($gemstones);
+            $vintages = Product::where('category_id', $category->id)->where('is_vintage', true)->get();
+            //dd($vintages);
+            $rhinestones = Product::where('category_id', $category->id)->where('is_rhinestone', true)->get();
+            // dd($rhinestones);
+            $others = Product::where('category_id', $category->id)->where('is_other', true)->get();
+            // dd($others);
+            if ($request->preciousMetals == 'true') {
+                $products = $products->merge($preciousMetals);
+            }
 
-        if ($category) {
-            $products = Product::where('category_id', $category->id)->get();
-            $image = $category->image_path;           
+            if ($request->gemstones == 'true') {
+                $products = $products->merge($gemstones);
+            }
+
+            if ($request->vintages == 'true') {
+                $products = $products->merge($vintages);
+            }
+
+            if ($request->rhinestones == 'true') {
+                $products = $products->merge($rhinestones);
+            }
+
+            if ($request->others == 'true') {
+                $products = $products->merge($others);
+            }
+            $products = $products->unique();
             $category = $category->name;
-            //dd($category);
+
             return view('pages.show')
                 ->with(compact('products'))
-                
                 ->with(compact('image'))
                 ->with(compact('category'));
+        } else {
+            $category = Category::where('slug', $slug)->first();
+
+            if ($category) {
+                $products = Product::where('category_id', $category->id)->get();
+                $image = $category->image_path;           
+                $category = $category->name;
+                //dd($category);
+                return view('pages.show')
+                    ->with(compact('products'))
+                    
+                    ->with(compact('image'))
+                    ->with(compact('category'));
+            }
         }
+        
+
+        
         
         return redirect()->back()->with('msg', 'No Category found.');
 

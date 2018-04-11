@@ -14,23 +14,16 @@
     text-decoration: none;
 }
 
-body {
-    /*background: #ccc;*/
-    /*background-image: url("../images/roses-bg.jpg");*/
-   /* background-image: url('../images/backgrounds/stars-bg.jpg');*/
-   /* max-width: 100%;*/
-}
-
 #wrapper {
     max-width: 1520px;
     margin: 0 auto;
     background: #fffeff;
-    color: #525252;
+    /*color: #525252;*/
     padding-top: 15px;
 }
 
 a {
-    color: #525252; 
+    color:#736B5F; 
 }
 
 .flex {
@@ -39,9 +32,6 @@ a {
 }
 
 .flex div {
-   /* width: 33%;*/
-    /*padding: 10px;*/
-    /*border: 1px solid red;*/
     margin: 0 20px;
 }
 
@@ -79,42 +69,46 @@ header img {
     margin: 5px 5px 0 0;
 }
 
-#user-nav {
-    /*border: 1px solid red;*/
-}
-
 #user-nav a {
     font-family: montserrat;
-    text-transform: none;
     font-size: 16px;
-    letter-spacing: initial;
 }
+
+#user-nav ul ul, #main-nav ul ul {
+    background: rgba(255,254,255,.8);
+}
+
+#user-nav a.highlighted, #main-nav a.highlighted {
+    background: #fffeff;
+}
+
+/*.sm-mint a:hover {
+    background: #b6b6b6;
+    color: #fff;
+}*/
+
+/*#hover-bg:hover {
+    background: #9c9c9c;
+}*/
 
 #user-nav li ul a {
     font-size: 14px;
 }
 
-#main-nav {
-    max-width: 1520px;
-}
-
 .main-nav-ul {
-    width: 885px;
-    margin: 0 auto;
-    /*border: 1px solid red;*/
+    width: 910px;
+    margin: 0 auto;  
 }
 
+#main-nav a {
+    font-family: courgette;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    /*color: #736B5F;*/
+}
 
-
-
-#admin-nav {
-    /*max-width: 1170px;*/
-    
-    
-    /*height: 175px;
-    background-image: url("../images/backgrounds/stars-bg-crop.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;*/
+#main-nav li ul a {
+    font-size: 18px;
 }
 
 a.current {
@@ -131,9 +125,10 @@ a.current {
 
 #view-cart {
     position: relative; 
-    top: 10px;
-    right: 10px;
-    left: 20px; 
+    top: 7px;
+    left: 20px;
+    /*right: 10px;
+    left: 20px;*/ 
 }
 
 main {
@@ -171,10 +166,6 @@ main h2 {
     letter-spacing: 1px;
     padding: 30px 0;
 }
-
-/*#master-h2 {
-    text-align: left;
-}*/
 
 input[type="checkbox"] {
     margin-right: 20px;
@@ -429,56 +420,8 @@ footer img {
 
 @media only screen and (max-width: 686px) {
     
-    h1 {
-        /*border: 1px solid red;*/
-        float: right;
-        width: 60%;
-        text-align: left;
-        line-height: .9;
-        margin-bottom: 30px;
-        margin-top: -10px;;
-    }
-    #your {
-        display: block;
-    }
-    #triangle1, #triangle2 {
-        display: none;
-    }
-    header h2 {
-        display: none;   
-    }
-     li {
-        display: block;
-         padding: 0;
-    }
-    #login-nav {
-        float: none;
-        margin-left: 5px;
-        margin-bottom: 25px;
-       /* border: 1px solid red;*/
-    }
-    #login-nav a {
-        font-family: "shorelines script";
-        font-size: 15px;
-        line-height: 2;
-    }
-    #main-nav li {
-        margin-bottom: 10px;
-    }
-    #main-nav a {
-        font-size: 25px;
-        /*border: 1px solid red;*/
-    }
-    #top-nav-row, #main-nav, #login-nav {
-        width: 135px;
-        /*border: 1px solid red;*/
-    }
-    #top-nav-row {
-        /*border: 1px solid red; */
-        background: none;
-        margin-top: 30px;
-        border-right: 1px solid black;
-    }
+  
+    
 }
 
 

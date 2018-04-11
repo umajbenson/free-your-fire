@@ -6,9 +6,9 @@
     </div>      
     <div>
         <nav id="user-nav">
-            <ul class="sm sm-mint">
+            <ul class="sm sm-mint user-nav-ul">
                 @if(Auth::user())                
-                    <li class="welcome"><a href="/edit-profile">Welcome, {{ Auth::user()->name }}</a>
+                    <li><a id="hover-bg" href="/edit-profile">Welcome, {{ Auth::user()->name }}</a>
                         <ul>
                             @if(Auth::user()->is_admin == true)
                                 <li><a href="/admin">Admin Page</a></li>                            

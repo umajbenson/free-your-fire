@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    $('#main-nav ul').smartmenus();
-    $('#user-nav ul').smartmenus();
-    $('#admin-nav ul').smartmenus();
+    $('.main-nav-ul').smartmenus();
+    $('.user-nav-ul').smartmenus();
+   // $('.admin-nav-ul').smartmenus();
     
     
    /* $("input[type=checkbox]").checkboxradio();*/
@@ -15,12 +15,7 @@ $(document).ready(function() {
     });
 
    
-	$(function() {
-		$('#main-nav ul').smartmenus({
-			subMenusSubOffsetX: 6,
-			subMenusSubOffsetY: -8
-		});
-	});
+    $(".inline").colorbox({inline:true, width:"100%"});
 
    
 });

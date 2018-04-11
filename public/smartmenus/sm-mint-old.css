@@ -1,23 +1,39 @@
+/* This plugin is mobile-first. The desktop styles are at the end */
+
 .sm-mint {
   border-top: 2px solid #8db863;
+    
+  /* Removed the green bottom border */
   /*border-bottom: 2px solid #8db863;*/
-  background: #fff;
+  /*remove white background for gradient*/
+  /*background: #fff;*/
 }
 .sm-mint a, .sm-mint a:hover, .sm-mint a:focus, .sm-mint a:active {
   padding: 13px 20px;
+  
   /* make room for the toggle button (sub indicator) */
   padding-right: 58px;
   color: #333;
-  font-family: Arial, sans-serif;*/
+    
+  /* Changed the font */
+  /*font-family: Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 17px;
-  text-decoration: none;
   font-family: "montserrat";
-  color: #736B5F;
+  font-size: 16px;
+  color: #736B5F; text-decoration: none;*/
+ 
+    
+  /*font-weight: 700;*/
+  /*letter-spacing: .6px;*/
+  /*padding: 0 15px;*/
 }
 .sm-mint a.current {
-  font-weight: bold;
+  /*font-weight: bold;*/
+  /*background: #e7e7e7;*/
+  /*color: #fff;*/
+  
 }
 .sm-mint a.disabled {
   color: #cccccc;
@@ -50,11 +66,11 @@
   border-top: 0;
 }
 .sm-mint ul {
-  /*background: rgba(141, 184, 99, 0.2);*/
-  /*background: #f6ffed;*/
+  background: rgba(141, 184, 99, 0.2);
 }
 .sm-mint ul a, .sm-mint ul a:hover, .sm-mint ul a:focus, .sm-mint ul a:active {
-  font-size: 14px;
+  font-size: 25px;
+  color: #fff;
   border-left: 8px solid transparent;
 }
 .sm-mint ul ul a,
@@ -120,26 +136,34 @@
 
   /* ...end */
   .sm-mint {
-    border-top: 0;
-    background: transparent;
+    border-top: 0; 
+    /* Here is where you would add a navbar background */
   }
   .sm-mint a, .sm-mint a:hover, .sm-mint a:focus, .sm-mint a:active, .sm-mint a.highlighted {
-    padding: 11px 20px;
+    font-family: "courgette";
+    text-transform: lowercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    /*padding: 11px 20px;*/
+    padding: 11px 17px;
     /*color: #333;*/
     color: #736B5F;
     border-radius: 4px 4px 0 0;
   }
-  .sm-mint a:hover, .sm-mint a:focus, .sm-mint a:active {
-    background: #8db863;
-    background: #b3b3b3;
-    background: #eeeeee;
-    background: #f0f0f0;
-    background: #f2f2f2;
-    background: #f6f6f6;
+  .sm-mint a:hover, .sm-mint a:focus, .sm-mint a:active {  
+    /* Changed hover background color and text color */
+   /* background: #ffe2d6;*/
+   background: #fffff9;
     /*color: #fff;*/
   }
+  
+  /* Add style to separate login anchors */
+  /*.sm-mint .right-links {
+    float: right ;
+}*/
   .sm-mint a.highlighted {
-    background: #F6FFED;
+    /*removed green background*/
+    /*background: #F6FFED;*/
     color: #333;
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.25);
   }
@@ -152,25 +176,30 @@
     padding-right: 34px;
   }
   .sm-mint a .sub-arrow {
-    top: 50%;
+    top: 55%;
     margin-top: -3px;
     right: 20px;
     width: 0;
     height: 0;
     border-width: 6px 4.02px 0 4.02px;
     border-style: solid dashed dashed dashed;
-    border-color: #525252 transparent transparent transparent;
+      
+    /*changed color of drop-down arrows*/ 
+    /*border-color: #8db863 transparent transparent transparent;*/
+    border-color: #000 transparent transparent transparent;
     background: transparent;
     border-radius: 0;
   }
   .sm-mint a:hover .sub-arrow, .sm-mint a:focus .sub-arrow, .sm-mint a:active .sub-arrow {
-    border-color: #525252 transparent transparent transparent;
+    border-color: #fff transparent transparent transparent;
   }
   .sm-mint a.highlighted .sub-arrow {
-    border-color: #525252 transparent transparent transparent;
+    /*border-color: #8db863 transparent transparent transparent;*/
+    border-color: #000 transparent transparent transparent;
+      
   }
   .sm-mint a.disabled .sub-arrow {
-    border-color: #525252 transparent transparent transparent;
+    border-color: #8db863 transparent transparent transparent;
   }
   .sm-mint a .sub-arrow::before {
     display: none;
@@ -181,7 +210,8 @@
   .sm-mint ul {
     border: 0;
     padding: 8px 0;
-    background: #F6FFED;
+   /* background: rgba(255,226,214,.75);*/
+    background: rgba(255,255,248,.75);
     border-radius: 0 4px 4px 4px;
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.25);
   }
@@ -191,12 +221,13 @@
   .sm-mint ul a, .sm-mint ul a:hover, .sm-mint ul a:focus, .sm-mint ul a:active, .sm-mint ul a.highlighted {
     border: 0 !important;
     padding: 10px 20px;
-    color: #736B5F;
+    color: #333;
     border-radius: 0;
+    font-size: 16px;
   }
   .sm-mint ul a:hover, .sm-mint ul a:focus, .sm-mint ul a:active, .sm-mint ul a.highlighted {
-    /*background: #8db863;*/
-    /*color: #fff;*/
+    background: none;
+    color: #D8B86F;
     box-shadow: none;
   }
   .sm-mint ul a.disabled {
@@ -211,13 +242,13 @@
     margin-top: -4.02px;
     border-width: 4.02px 0 4.02px 6px;
     border-style: dashed dashed dashed solid;
-    border-color: transparent transparent transparent #525252;
+    border-color: transparent transparent transparent #8db863;
   }
   .sm-mint ul a:hover .sub-arrow, .sm-mint ul a:focus .sub-arrow, .sm-mint ul a:active .sub-arrow, .sm-mint ul a.highlighted .sub-arrow {
     border-color: transparent transparent transparent #fff;
   }
   .sm-mint ul a.disabled .sub-arrow {
-    border-color: transparent transparent transparent #525252;
+    border-color: transparent transparent transparent #8db863;
   }
   .sm-mint .scroll-up,
   .sm-mint .scroll-down {

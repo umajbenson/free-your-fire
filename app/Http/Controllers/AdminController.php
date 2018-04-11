@@ -44,7 +44,7 @@ class AdminController extends Controller
         return view('admin.users-index')->with(compact('users'))->with(compact('products'));
     }
 
-    
+
 
     
 
