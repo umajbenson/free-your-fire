@@ -1,8 +1,6 @@
 $(document).ready(function() {
     $('.main-nav-ul').smartmenus();
-    $('.user-nav-ul').smartmenus();
-   // $('.admin-nav-ul').smartmenus();
-    
+    $('.user-nav-ul').smartmenus();   
     
    /* $("input[type=checkbox]").checkboxradio();*/
 
@@ -14,8 +12,11 @@ $(document).ready(function() {
             $(this).addClass("current");
     });
 
-   
     $(".inline").colorbox({inline:true, width:"100%"});
-
    
 });
+
+
+
+
+
