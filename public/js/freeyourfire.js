@@ -5,11 +5,23 @@ $(document).ready(function() {
    /* $("input[type=checkbox]").checkboxradio();*/
 
     
-    var pgurl = window.location.href.substr(window.location.href
+    var pgurl1 = window.location.href.substr(window.location.href
     .lastIndexOf("/"));
+    var pgurl2 = window.location.href.substr(window.location.href.lastIndexOf("/show"));
     $(".sm-mint a").each(function(){
-            if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
+        if($(this).attr("href") == pgurl1 || $(this).attr("href") == '') {
             $(this).addClass("current");
+           
+        }
+        if($(this).attr("href") == pgurl2) {
+            $(this).addClass("current");
+            $(this).parent().parent().parent().children().addClass('current');
+    }
+       
+        
+        
+
+          
     });
 
     $(".inline").colorbox({inline:true, width:"100%"});

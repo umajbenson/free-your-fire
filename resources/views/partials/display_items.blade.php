@@ -2,11 +2,11 @@
     <div class="row">
         @foreach($productChunk as $product)
             <div class="figure">
-                <a class='inline' href="#inline_content"><img src="{{ $product->image_path }}"></a>
+                <a class='inline' href=".inline-content"><img src="{{ $product->image_path }}"></a>
                 <p class="center-products">{{ $product->name }}</p>
                 <p class="center-products">${{ $product->price }}</p>
                 
-                <!--<a href="{{ route('product.addToCart', ['id'=>$product->id]) }}">Add To Cart</a>-->
+                <!--<a href="{ { route('product.addToCart', ['id'=>$product->id]) }}">Add To Cart</a>-->
                 <form id="paypal" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value={{ $product->paypal_button }}>
@@ -15,13 +15,13 @@
                     </form>
                          
             </div>
-            <div id="lightbox">
-                <div id="inline_content">
+            <div class="lightbox">
+                <div class="inline-content">
                     <div class="lightbox-photo">
                         <img src="{{ $product->image_path }}">
                     </div>
                     <div class="lightbox-text">
-                        <p id="lightbox-name">{{ $product->name }}</p>
+                        <p class="lightbox-name">{{ $product->name }}</p>
                         <p class="center-products">{{ $product->description }}</p>
                         
                         <p class="center-products">${{ $product->price }}</p>

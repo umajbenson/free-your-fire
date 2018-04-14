@@ -13,9 +13,22 @@
 @endsection
 
 @section('content')
-    <p>This page is for members only</p>
-    <p>Logged in as {{ Auth::user()->name }}</p>
-    <p>Email Address: {{ Auth::user()->email }}</p>
-    <p>Phone Number: {{ Auth::user()->phone }}</p>
+    <table id="members-page-table">
+        <tr>
+            <td class="right-align">Logged in as:</td>
+            <td class="left-align">{{ Auth::user()->name }}</td>
+        </tr>
+        <tr>
+            <td class="right-align">Email Address:</td>
+            <td class="left-align">{{ Auth::user()->email }}</td>
+        </tr>
+        <tr>
+            <td class="right-align">Phone Number:</td>
+            <td class="left-align">{{ Auth::user()->phone }}</td>
+        </tr>
+    </table>
+
+   
     <a href="/edit-profile">Edit your profile</a>
+
 @endsection

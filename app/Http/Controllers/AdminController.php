@@ -30,7 +30,6 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
-
     /**
      * Show the application dashboard.
      *
@@ -45,10 +44,6 @@ class AdminController extends Controller
     }
 
 
-
-    
-
-
     public function editUser($id) {
         $user = User::where('id', $id)->first();
         $rolesArray = [];
@@ -61,6 +56,7 @@ class AdminController extends Controller
         return view('admin.users-edit')->with(compact('user'))->with(compact('rolesArray'));
     }
 
+
     public function updateUser($id, Request $request)
     {
         $user = User::where('id', $id)->first();
@@ -71,6 +67,7 @@ class AdminController extends Controller
         }
         dd($request);
     }
+
 
     public function deleteUser($id)
     {
@@ -83,13 +80,13 @@ class AdminController extends Controller
         dd($user);
     }
 
+
     public function productsIndex()
     {
         $products = Product::all();
          //dd($products);
         return view('admin.products-index')->with(compact('products'));
     }
-
 
 
     public function editProduct($id) {
@@ -104,6 +101,7 @@ class AdminController extends Controller
         return view('admin.products-edit')->with(compact('product'))->with(compact('categoriesArray'));
     }
 
+
     public function updateProduct($id, Request $request)
     {
         $product = Product::where('id', $id)->first();
@@ -115,6 +113,7 @@ class AdminController extends Controller
         dd($request);
     }
    
+
     public function deleteProduct($id)
     {
         $product = Product::where('id', $id)->first();
