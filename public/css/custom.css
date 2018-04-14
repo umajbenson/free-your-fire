@@ -1,6 +1,6 @@
 @font-face {
     font-family: "antro vectra";
-    src: url("../fonts/antro_vectra.otf");
+    src: url('/fonts/antro_vectra.otf') ;
 }
 
 @font-face {
@@ -96,14 +96,14 @@ header img {
 }
 
 .main-nav-ul {
-    width: 910px;
+    width: 900px;
     margin: 0 auto;  
 }
 
 #main-nav a {
-    font-family: courgette;
-    font-size: 20px;
-    letter-spacing: 1.5px;
+    font-family: montserrat;
+    font-size: 18px;
+    /*letter-spacing: 1.5px;*/
     /*color: #736B5F;*/
 }
 
@@ -115,6 +115,7 @@ a.current {
     font-weight: bold;
     color: #525252;
 }
+
 
 /*#cart {
   position: fixed;
@@ -159,12 +160,13 @@ main {
 }
 
 main h2 {
-    font-family: "courgette";
-    font-size: 38px;
-    font-weight: normal;
+    font-family: "antro vectra";
+    font-size: 47px;
+    /*font-weight: bold;*/
+    
     color: #525252;
     letter-spacing: 1px;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 input[type="checkbox"] {
@@ -214,20 +216,18 @@ input[type="checkbox"] {
 
 /* Lightbox styles */
 
-#lightbox {
+.lightbox {
     display: none;   
 }
 
-#inline_content {
+.inline-content {
   display: flex;
   flex-flow: row;
 }
 
 .lightbox-photo {
-    /*width: 30%;*/
-    /*height: auto;*/
-    padding: 40px;
-    width: 50%;
+    width: 30%;
+    padding: 40px 40px 20px 40px;
 }
 
 .lightbox-photo img {
@@ -236,21 +236,36 @@ input[type="checkbox"] {
 }
 
 .lightbox-text {
-    width: 50%;
+    width: 30%;
     color: #545454;
     font-size: 20px;
     padding: 40px;
-    /*padding: 40px 40px 0 550px;*/
 }
 
 .lightbox-text p {
     margin-bottom: 28px;
 }
 
-#lightbox-name {
-    font-family: courgette;
-    font-size: 40px;
+.lightbox-name {
+    font-family: "antro vectra";
+    font-size: 47px;
+    font-weight: bold;
     margin-bottom: 20px;
+}
+
+/* Members Page */
+
+/*#members-page-table {
+    border-left: 1px solid #525252;
+}*/
+
+#members-page-table, .right-align, .left-align {
+    border: none;
+}
+
+.right-align {
+   text-align: right;
+   border-left: 1px solid #525252;
 }
 
 /* Admin Pages */

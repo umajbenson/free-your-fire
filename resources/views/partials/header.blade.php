@@ -8,7 +8,7 @@
         <nav id="user-nav">
             <ul class="sm sm-mint user-nav-ul">
                 @if(Auth::user())                
-                    <li><a id="hover-bg" href="/edit-profile">Welcome, {{ Auth::user()->name }}</a>
+                    <li><a class="hover" href="/edit-profile">Welcome, {{ Auth::user()->name }}</a>
                         <ul>
                             @if(Auth::user()->is_admin == true)
                                 <li><a href="/admin">Admin Page</a></li>                            
