@@ -6,12 +6,12 @@
 
 @section('image')
 
-    <img src="/images/amethyst.jpg">
+    <img src="/images/master2.jpg" width="1520" height="300">
 @endsection
 
 
 @section('h2')
-    Edit Your Profile
+    Edit your Profile
 @endsection
 
 @section('content')

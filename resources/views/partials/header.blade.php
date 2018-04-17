@@ -11,7 +11,7 @@
                     <li><a class="hover" href="/edit-profile">Welcome, {{ Auth::user()->name }}</a>
                         <ul>
                             @if(Auth::user()->is_admin == true)
-                                <li><a href="/admin">Admin Page</a></li>                            
+                                <li><a class="admin-home" href="/admin">Admin Page</a></li>                            
                                 <li><a href="/members">Member Area</a></li>
                                 <li><a href="/edit-profile">Edit Profile</a></li>
                                 <li><a href="/logout">Logout</a></li>

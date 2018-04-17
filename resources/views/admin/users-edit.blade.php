@@ -9,7 +9,7 @@
 @endsection
 
 @section('image')
-    <img src="/images/amethyst.jpg">
+    <img src="/images/master2.jpg" width="1520" height="300">
 @endsection
 
 @section('content')
@@ -31,7 +31,7 @@
   
     <br>
     <div class="align-left">
-    {!! Form::label('is_admin', 'Admin', ['class' => 'label']) !!}
+    {!! Form::label('is_admin', 'Admin', ['class' => 'select-label']) !!}
 
     {!! Form::select('is_admin', [1 => 'Yes', 0 => 'No'], isset($user) ? $user->is_admin : 0, ['class' => 'select']) !!}
     </div>
@@ -39,14 +39,14 @@
 
     <br>
     <div class="align-left">
-    {!! Form::label('is_active', 'Active', ['class' => 'label']) !!}
+    {!! Form::label('is_active', 'Active', ['class' => 'select-label']) !!}
 
     {!! Form::select('is_active', [1 => 'Yes', 0 => 'No'], isset($user) ? $user->is_active : 0, ['class' => 'select']) !!}
     </div>
 
     <br>
     <div>
-    {!! Form::label('role_id', 'Role', ['class' => 'label']) !!}
+    {!! Form::label('role_id', 'Role', ['class' => 'select-label']) !!}
 
     {!! Form::select('role_id', $rolesArray, isset($user) ? $user->role_id : 1, ['class' => 'select']) !!}
     </div>
