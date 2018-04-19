@@ -71,6 +71,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('/products', 'AdminController@productsIndex');
     Route::get('/products/edit/{id}', 'AdminController@editProduct')->name('products-edit');
     Route::post('/products/edit/{id}', 'AdminController@updateProduct'); 
+    Route::post('/products/search', 'AdminController@submitSearch');
     
 });
 

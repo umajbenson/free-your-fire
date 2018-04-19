@@ -13,6 +13,7 @@
 @endsection
 
 @section('content')
+
     <div id="product-edit-form-div">
 
         {!! Form::open(['id' => 'product-edit-form']) !!}

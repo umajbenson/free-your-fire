@@ -5,7 +5,7 @@
 @endsection
 
 @section('image')
-    <img src="/images/earrings.jpg" width="1520" height="300">
+    <img src="/images/master2.jpg" width="1520" height="300" alt="photo of jewelry">
 @endsection
 
 @section('h2')     
@@ -13,12 +13,10 @@
 @endsection
 
 @section('content')
-
+    
     <div class="card-body">
         <form method="POST" action="{{ route('password.request') }}">
             @csrf
-
-            <input type="hidden" name="token" value="{{ $token }}">
 
             <div class="form-group row">
                 <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
