@@ -9,10 +9,11 @@
 @endsection
 
 @section('image')
-    <img src="/images/amethyst.jpg">
+    <img src="/images/master2.jpg" width="1520" height="300">
 @endsection
 
 @section('content')
+
     <div id="product-edit-form-div">
 
         {!! Form::open(['id' => 'product-edit-form']) !!}

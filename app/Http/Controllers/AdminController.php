@@ -81,10 +81,14 @@ class AdminController extends Controller
     }
 
 
-    public function productsIndex()
+    public function productsIndex(Request $request)
     {
-        $products = Product::all();
-         //dd($products);
+        if ($request->search) {
+            $products = $this->searchProducts($request->search);
+        } else {
+            $products = Product::all();
+        }
+        
         return view('admin.products-index')->with(compact('products'));
     }
 
@@ -123,5 +127,18 @@ class AdminController extends Controller
             return back();
         }
        // dd($product);
+    }
+
+    private function searchProducts($search)
+    {
+        $products = Product::where('name', 'LIKE', '%'.$search.'%')->get();
+
+        return $products;
+    }
+
+    public function submitSearch(Request $request)
+    {
+        //dd($request->queryString);
+        return redirect('/admin/products?search=' . $request->queryString);
     }
 }

@@ -20,6 +20,8 @@
     <!--<script src="/js/jquery-ui.min.js"></script>-->
     <script src="/smartmenus/jquery.smartmenus.min.js"></script>
     <script src="/js/freeyourfire.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
     <title>@yield('title')</title> 
 </head>
