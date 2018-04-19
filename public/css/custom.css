@@ -198,6 +198,7 @@ input[type="checkbox"] {
   padding: 2%;
   width: 29%;
   text-align: center;
+  margin-bottom: -300px;
 }
 
 .figure img {
