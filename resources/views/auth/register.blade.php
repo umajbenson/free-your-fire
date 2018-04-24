@@ -1,4 +1,3 @@
-
 @extends('layouts.master')
 
 @section('title')     
@@ -6,7 +5,7 @@
 @endsection
 
 @section('image')
-    <img src="/images/master2.jpg" width="1520" height="300">
+    <img src="/images/crystals.jpg" width="1520" height="100">
 @endsection
 
 @section('h2')     

@@ -20,6 +20,7 @@
     background: #fffeff;
     /*color: #525252;*/
     padding-top: 15px;
+    position: relative;
 }
 
 a {
@@ -35,14 +36,58 @@ a {
     margin: 0 20px;
 }
 
+#flex-left {
+    margin: 0;
+    width: 66%;
+    padding-right: 15px;
+}
+
+#flex-left p {
+    margin-bottom: 18px; 
+}
+
+#flex-right {
+    width: 33%;
+    padding-left: 15px; 
+}
+
+#flex-right p {
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+#register {
+    background:    #cccccc;
+    background:    -webkit-linear-gradient(#cccccc, #444444);
+    background:    linear-gradient(#cccccc, #444444);
+    border:        1px solid #999999;
+    border-radius: 1000px;
+    padding:       8px 20px;
+    margin-top: 20px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal 700 18px/1 "Montserrat", sans-serif;
+    text-align:    center;
+    text-shadow:   1px 1px #000000;
+}
+
+#register a {
+    color: #fff;
+    font-family: montserrat;
+}
+
 #branding {
     text-align: center;
-    margin: -40px 0 40px 0;
+    margin: -40px 0 20px 0;
 }
 
 h1 { 
     font-family: "antro vectra";
     font-size: 70px;
+}
+
+header {
+    position: relative;
 }
 
 header h2 {
@@ -60,7 +105,7 @@ header h3 {
     font-size: 16px;
     font-weight: normal;
     font-style: italic;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
 }
 
 header img {
@@ -96,24 +141,63 @@ header img {
 }
 
 .main-nav-ul {
-    width: 910px;
-    margin: 0 auto;  
+    width: 512px;
+    margin: 0 auto;
+    padding-top: 25px;
+    /*padding-bottom: 10px;*/
+   /* border: 1px solid red;*/
+     
+}
+
+#main-nav {
+   /*padding-top: 20px;*/
+   /* padding-bottom:; */
+    height: 65px;
 }
 
 #main-nav a {
     font-family: montserrat;
     font-size: 18px;
+   
     /*letter-spacing: 1.5px;*/
     /*color: #736B5F;*/
 }
 
-#main-nav li ul a {
-    font-size: 18px;
+.main-nav-a {
+    padding-bottom: 12px;
 }
+
+
+
+/*#main-nav li ul a {
+    font-size: 18px;
+    
+}*/
 
 a.current {
     font-weight: bold;
     color: #525252;
+}
+
+#nav-wrapper {
+    height: 65px;
+   /* margin-bottom: 10px;*/
+   /* padding-top: 10px;*/
+   margin-top: 20px;
+  /* border: 1px solid blue;*/
+    
+}
+
+.navbar-fixed {
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    background: #fffeff;
+    border-bottom: 1px solid #545454;
+    box-shadow: 10px 0 5px #000;
+    /*height: 80px;*/
+   /* padding-top: 30px;*/
 }
 
 
@@ -126,8 +210,8 @@ a.current {
 
 #view-cart {
     position: relative; 
-    top: 7px;
-    left: 20px;
+    top: 5px;
+    left: 15px;
     /*right: 10px;
     left: 20px;*/ 
 }
@@ -144,6 +228,20 @@ main {
 #hero {
     width: 100%;
     height: auto;
+    /*box-shadow: 0 2px 5px #545454, 0 -2px 5px #545454;*/
+}
+
+/*#shop-image {
+    box-shadow: 0 2px 5px #545454, 0 -2px 5px #545454; 
+}*/
+
+/*.content-div {
+    margin: 0;
+    padding: 0;
+}*/
+
+#master-wrapper p {
+    margin-bottom: 20px;
 }
 
 #content-wrapper, #master-wrapper {
@@ -167,6 +265,10 @@ main h2 {
     color: #525252;
     letter-spacing: 1px;
     padding: 20px 0;
+}
+
+.link-hover:hover {
+    color: #000;
 }
 
 input[type="checkbox"] {
@@ -198,13 +300,36 @@ input[type="checkbox"] {
   padding: 2%;
   width: 29%;
   text-align: center;
-  margin-bottom: -300px;
+  /**margin-bottom: -300px;**/
 }
 
 .figure img {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
+}
+
+.row div {
+    padding: 20px;
+    width: 29%;
+    position: relative;
+}
+
+.text-overlay {
+    position: absolute;
+    z-index: 999;
+    top:20px;
+    left:20px;
+    width: 100%;
+    font-size: 30px;
+    color: #525252;
+    padding: 15px;
+    background: rgba(255,255,255,.75);
+}
+
+.row img {
+    width: 100%;
+    height: auto;
 }
 
 .figure p {
@@ -409,6 +534,11 @@ td a:hover {
     text-align: center;
 }*/
 
+.g-recaptcha {
+    margin-top: 30px;
+    margin-left: 168px;
+}
+
 .login-checkbox {
    margin-left: 170px;
 }
@@ -486,7 +616,9 @@ footer img {
     margin-bottom: 10px;
 }
 
-
+.hidden-input {
+    display: none;
+}
 
 
 @media only screen and (max-width: 686px) {

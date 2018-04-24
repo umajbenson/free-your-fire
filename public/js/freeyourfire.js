@@ -6,7 +6,25 @@ $(document).ready(function() {
 
     addCurrentClass();
 
-    $(".inline").colorbox({inline:true, width:"100%"});
+    if ($(".inline").length > 0) {
+        $(".inline").colorbox({inline:true, width:"100%"});
+    }
+    
+
+    //alert($('#main-nav').scrollTop());
+
+    $(window).scroll(function () { 
+
+      /* alert($('#main-nav').scrollTop());*/
+    
+        if ($(window).scrollTop() > 157) {
+          $('#main-nav').addClass('navbar-fixed');
+        }
+    
+        if ($(window).scrollTop() < 158) {
+          $('#main-nav').removeClass('navbar-fixed');
+        }
+      });
    
 });
 

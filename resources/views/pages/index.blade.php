@@ -9,6 +9,34 @@
 @endsection
 
  @section('h2')  
-    Site under construction:<br>
-    Launch date May 2018  
+   Welcome  
 @endsection
+@if(env('PRODUCTION_MODE') == 'production')
+    @section('content')
+        <div class="flex">
+            <div id="flex-left">
+                <p>Free Your Fire is a treasure chest of unique items and ideas designed to enhance your individuality. As of our launch date in May 2018, our product selection consists exclusively of pre-owned jewelry. Many of these pieces are vintage items which have been collected from estates. Others are beautiful, fun and eclectic accessories that have been lightly worn.
+
+                <p>We believe that our pre-owned items are both economical and self-expressive. It is our hope you will find something truly special for your jewelry wardrobe as you browse.</p>
+
+                <p>Check back often, as we will soon be adding handmade gemstone jewelry which is both decorative and functional. These pieces focus on gemstone qualities such as healing, protection, and strength to assist you in your daily life. Each piece comes with a guide to help you maximize its benefits.</p>
+                
+                <p>If you would like to be notified of the arrival of our handmade jewelry line, <a class="link-hover" href="/register"><em>register as a member</em></a> and be sure the box is checked to sign up for our newsletter. You will also receive lots of useful information about our products and related topics.</p>
+            </div>
+
+            <div id="flex-right">
+                <h3>Sign up for our newsletter!</h3>
+                <p>Become a member to receive jewelry-care advice, wardrobe suggestions, gemstone info, new-product notifications, special promotions and more.</p>
+
+                <a href="/register"><button type="button" id="register">Sign Up</button></a>   
+            </div>
+        </div>
+        <div class="flex">
+        </div>
+    @endsection
+@else
+    @section('content')
+    {{ var_dump(env('PRODUCTION_READY')) }}
+        <h1>LANDING PAGE HERE</h1>
+    @endsection
+@endif
