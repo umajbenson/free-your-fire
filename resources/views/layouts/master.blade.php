@@ -19,17 +19,21 @@
     <script src="/js/jquery-3.3.1.min.js"></script>
     <!--<script src="/js/jquery-ui.min.js"></script>-->
     <script src="/smartmenus/jquery.smartmenus.min.js"></script>
+    
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     <script src="/js/freeyourfire.js"></script>
-
     <title>@yield('title')</title> 
 </head>
 
 <body>
 <div id="wrapper">
 <header>
+    
     @include('partials.header')
-
-    @include('partials.nav')
+    @if(env('PRODUCTION_MODE') == 'production')
+        @include('partials.nav')
+    @endif
 </header> 
 
 <main>
@@ -39,7 +43,7 @@
     
     <div id="master-wrapper">
 
-         @if(isset($admin))
+        @if(isset($admin))
             @include('partials.admin-nav')
         @endif
 

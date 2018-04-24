@@ -31,12 +31,8 @@
 <div id="wrapper">
 <header>
     @include('partials.header')
-    
-    @if(!isset($admin))    
-        @include('partials.nav')
-    @else
-        @include('partials.admin-nav')
-    @endif
+       
+    @include('partials.nav')  
 </header> 
 
 <main>

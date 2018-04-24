@@ -21,6 +21,7 @@ class ProductController extends Controller
     public function show($slug, Request $request)
     {
         $category = Category::where('slug', $slug)->first();
+        $queriesFiltered = null;
        
         if (isset($request->sortby)) {
             $image = $category->image_path;           ;
@@ -55,12 +56,16 @@ class ProductController extends Controller
                 $products = $products->merge($others);
             }
             $products = $products->unique();
+
             $category = $category->name;
+
+            $queriesFiltered = $request->query();
 
             return view('pages.show')
                 ->with(compact('products'))
                 ->with(compact('image'))
-                ->with(compact('category'));
+                ->with(compact('category'))
+                ->with(compact('queriesFiltered'));
         } else {
             $category = Category::where('slug', $slug)->first();
 
@@ -82,6 +87,18 @@ class ProductController extends Controller
         
         return redirect()->back()->with('msg', 'No Category found.');
 
+    }
+
+    public function filter(Request $request)
+    {
+        
+        $url = $request->baseUrl . '?sortby=true';
+
+        foreach(array_keys($request->filters) as $filter) {
+            $url = $url . '&' . $filter . '=true';
+        }
+        
+        return redirect($url);
     }
 
     /*public function getAddToCart(Request $request, $id) {

@@ -38,6 +38,8 @@ Route::get('/register', 'RegisterController@register');
 
 Route::get('/add-to-cart/{id}', 'ProductController@getAddToCart')->name('product.addToCart');
 
+Route::post('/filter-products', 'ProductController@filter')->name('products.filter');
+
 Route::get('/cart/{id}', 'ProductController@getAddToCart')->name('product.cart');
 
 Route::get('/edit-profile', 'UserController@getProfile');
@@ -71,6 +73,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('/products', 'AdminController@productsIndex');
     Route::get('/products/edit/{id}', 'AdminController@editProduct')->name('products-edit');
     Route::post('/products/edit/{id}', 'AdminController@updateProduct'); 
+    Route::post('/products/search', 'AdminController@submitSearch');
     
 });
 

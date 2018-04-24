@@ -2,7 +2,7 @@
     <div class="row">
         @foreach($productChunk as $product)
             <div class="figure">
-                <a class='inline' href=".inline-content"><img src="{{ $product->image_path }}"></a>
+                <a class='inline' href="#inline-content-{{ $product->id }}"><img src="{{ $product->image_path }}"></a>
                 <p class="center-products">{{ $product->name }}</p>
                 <p class="center-products">${{ $product->price }}</p>
                 
@@ -10,13 +10,13 @@
                 <form id="paypal" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value={{ $product->paypal_button }}>
-                    <input type="image" src="https://dabuttonfactory.com/button.png?t=Add+To+Cart&f=Noto+Sans&ts=18&tc=fff&tshs=1&tshc=000&hp=15&vp=8&c=11&bgt=gradient&bgc=93c47d&ebgc=38761d" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    <input type="image" src="/images/add-to-cart-button.png" border="0" name="submit" style="width: 134px; height: auto;" alt="PayPal - The safer, easier way to pay online!">
+                    
                     </form>
                          
             </div>
             <div class="lightbox">
-                <div class="inline-content">
+                <div id="inline-content-{{ $product->id }}" class="inline-content">
                     <div class="lightbox-photo">
                         <img src="{{ $product->image_path }}">
                     </div>
@@ -26,12 +26,12 @@
                         
                         <p class="center-products">${{ $product->price }}</p>
                         
-                        <!--<a href="{{ route('product.addToCart', ['id'=>$product->id]) }}">Add To Cart</a>-->
+                        <!--<a href="{ { route('product.addToCart', ['id'=>$product->id]) }}">Add To Cart</a>-->
                         <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                             <input type="hidden" name="cmd" value="_s-xclick">
                             <input type="hidden" name="hosted_button_id" value={{ $product->paypal_button }}>
-                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                            <input type="image" src="/images/add-to-cart-button.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                            <img alt="" border="0" src="/images/add-to-cart-button.png" width="1" height="1">
                         </form>
                     </div>     
                 </div>
