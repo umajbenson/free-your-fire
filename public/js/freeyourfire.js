@@ -1,47 +1,70 @@
 $(document).ready(function() {
-    $('.main-nav-ul').smartmenus();
-    $('.user-nav-ul').smartmenus();   
     
+    smartMenus('.main-nav-ul');
+
+    smartMenus('.user-nav-ul');
+     
    /* $("input[type=checkbox]").checkboxradio();*/
 
-    addCurrentClass();
+    addCurrentClass('.sm-mint a', '/', '/show', '/admin', '/admin', '.admin-home');
 
-    if ($(".inline").length > 0) {
-        $(".inline").colorbox({inline:true, width:"100%"});
-    }
-    
+    stickyNav1('#main-nav', 157);
 
-    //alert($('#main-nav').scrollTop());
+    stickyNav2('#admin-nav', 256);
 
-    $(window).scroll(function () { 
-
-      /* alert($('#main-nav').scrollTop());*/
-    
-        if ($(window).scrollTop() > 157) {
-          $('#main-nav').addClass('navbar-fixed');
-        }
-    
-        if ($(window).scrollTop() < 158) {
-          $('#main-nav').removeClass('navbar-fixed');
-        }
-      });
-   
+    lightbox('.inline'); 
 });
 
-function addCurrentClass () {
+function smartMenus(ulClass) {
+    $(ulClass).smartmenus();
+}
 
-    var pgurl1 = window.location.href.substr(window.location.href.lastIndexOf("/"));
-    var pgurl2 = window.location.href.substr(window.location.href.lastIndexOf("/show"));
-    var pgurl3 = window.location.href.substr(window.location.href.lastIndexOf("/admin"));
+function addCurrentClass(anchorSelector, param1, param2, param3, param4, duplicateNavItem) {
 
-    $(".sm-mint a").each(function(){
+    var pgurl1 = window.location.href.substr(window.location.href.lastIndexOf(param1));
+    var pgurl2 = window.location.href.substr(window.location.href.lastIndexOf(param2));
+    var pgurl3 = window.location.href.substr(window.location.href.lastIndexOf(param3));
+
+    $(anchorSelector).each(function() {
         if($(this).attr("href") == pgurl1 || $(this).attr("href") == '' || $(this).attr("href") == pgurl2 || $(this).attr('href') == pgurl3) {
             $(this).addClass("current");
             $(this).parent().parent().parent().children().addClass('current');                
         
-             if ($(this).attr('href').endsWith('admin')) {
-                 $('.admin-home').addClass('current');
-             }
+            if ($(this).attr('href').endsWith(param4)) {
+                 $(duplicateNavItem).addClass('current');
+            }
         }
     });
+}
+
+function stickyNav1(navID, scrollAmt) {
+    $(window).scroll(function () { 
+      
+        if ($(window).scrollTop() > scrollAmt) {
+            $(navID).addClass('navbar-fixed');
+        }
+      
+        if ($(window).scrollTop() < (scrollAmt+1)) {
+            $(navID).removeClass('navbar-fixed');
+        }
+    });
+}
+
+function stickyNav2(navID, scrollAmt) {
+    $(window).scroll(function () { 
+      
+        if ($(window).scrollTop() > scrollAmt) {
+            $(navID).addClass('navbar2-fixed');
+        }
+      
+        if ($(window).scrollTop() < (scrollAmt+1)) {
+            $(navID).removeClass('navbar2-fixed');
+        }
+    });
+}
+
+function lightbox(imageAnchorClass) {
+    if ($(imageAnchorClass).length > 0) {
+        $(imageAnchorClass).colorbox({inline:true, width:"100%"});
+    }
 }

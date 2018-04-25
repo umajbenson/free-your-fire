@@ -3,10 +3,10 @@
     src: url('/fonts/Antro_Vectra.otf') ;
 }
 
-@font-face {
+/*@font-face {
     font-family: "oh samantha";
     src: url("../fonts/oh-samantha demo.ttf");
-}
+}*/
 
 * {
     margin: 0;
@@ -18,7 +18,6 @@
     max-width: 1520px;
     margin: 0 auto;
     background: #fffeff;
-    /*color: #525252;*/
     padding-top: 15px;
     position: relative;
 }
@@ -57,18 +56,18 @@ a {
 }
 
 #register {
-    background:    #cccccc;
-    background:    -webkit-linear-gradient(#cccccc, #444444);
-    background:    linear-gradient(#cccccc, #444444);
-    border:        1px solid #999999;
+    background: #cccccc;
+    background: -webkit-linear-gradient(#cccccc, #444444);
+    background: linear-gradient(#cccccc, #444444);
+    border: 1px solid #999999;
     border-radius: 1000px;
-    padding:       8px 20px;
+    padding: 8px 20px;
     margin-top: 20px;
-    color:         #ffffff;
-    display:       inline-block;
-    font:          normal 700 18px/1 "Montserrat", sans-serif;
-    text-align:    center;
-    text-shadow:   1px 1px #000000;
+    color:#ffffff;
+    display: inline-block;
+    font: normal 700 18px/1 "Montserrat", sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
 }
 
 #register a {
@@ -91,7 +90,9 @@ header {
 }
 
 header h2 {
+
     /* asheville, north carolina */
+
     font-family: "montserrat";
     letter-spacing: 7px;
     color: #736B5F;
@@ -105,7 +106,6 @@ header h3 {
     font-size: 16px;
     font-weight: normal;
     font-style: italic;
-    /*margin-bottom: 10px;*/
 }
 
 header img {
@@ -127,15 +127,6 @@ header img {
     background: #fffeff;
 }
 
-/*.sm-mint a:hover {
-    background: #b6b6b6;
-    color: #fff;
-}*/
-
-/*#hover-bg:hover {
-    background: #9c9c9c;
-}*/
-
 #user-nav li ul a {
     font-size: 14px;
 }
@@ -144,35 +135,21 @@ header img {
     width: 512px;
     margin: 0 auto;
     padding-top: 25px;
-    /*padding-bottom: 10px;*/
-   /* border: 1px solid red;*/
-     
+    padding-bottom: 5px;   
 }
 
 #main-nav {
-   /*padding-top: 20px;*/
-   /* padding-bottom:; */
-    height: 65px;
+    height: 70px;
 }
 
 #main-nav a {
     font-family: montserrat;
     font-size: 18px;
-   
-    /*letter-spacing: 1.5px;*/
-    /*color: #736B5F;*/
 }
 
 .main-nav-a {
     padding-bottom: 12px;
 }
-
-
-
-/*#main-nav li ul a {
-    font-size: 18px;
-    
-}*/
 
 a.current {
     font-weight: bold;
@@ -180,12 +157,8 @@ a.current {
 }
 
 #nav-wrapper {
-    height: 65px;
-   /* margin-bottom: 10px;*/
-   /* padding-top: 10px;*/
-   margin-top: 20px;
-  /* border: 1px solid blue;*/
-    
+    height: 70px;
+    margin-top: 20px;   
 }
 
 .navbar-fixed {
@@ -195,50 +168,34 @@ a.current {
     width: 100%;
     background: #fffeff;
     border-bottom: 1px solid #545454;
-    box-shadow: 10px 0 5px #000;
-    /*height: 80px;*/
-   /* padding-top: 30px;*/
+    box-shadow: 0 0 5px #000;
 }
 
-
+/***** cart icon for Stripe *****/
 /*#cart {
   position: fixed;
   top: 70px;
   right: 10px;
-
 }*/
 
 #view-cart {
     position: relative; 
     top: 5px;
-    left: 15px;
-    /*right: 10px;
-    left: 20px;*/ 
+    left: 15px; 
 }
 
 main {
-    max-width: 100%; /* contains the hero image */
-    /*background: #fffff9;*/
-    /*background-image: url("../images/sun-bg.jpg");*/
-    /*filter: opacity(.2);*/
-    /*border: 1px solid red;*/
+
+    /* contains the hero image */
+
+    max-width: 100%; 
     padding-bottom: 30px;
 }
 
 #hero {
     width: 100%;
     height: auto;
-    /*box-shadow: 0 2px 5px #545454, 0 -2px 5px #545454;*/
 }
-
-/*#shop-image {
-    box-shadow: 0 2px 5px #545454, 0 -2px 5px #545454; 
-}*/
-
-/*.content-div {
-    margin: 0;
-    padding: 0;
-}*/
 
 #master-wrapper p {
     margin-bottom: 20px;
@@ -260,7 +217,6 @@ main {
 main h2 {
     font-family: "antro vectra";
     font-size: 47px;
-    /*font-weight: bold;*/
     
     color: #525252;
     letter-spacing: 1px;
@@ -289,7 +245,7 @@ input[type="checkbox"] {
     margin: 0 auto 30px auto;
 }
 
-/* Product images */
+/***** Product pages *****/
 
 .row {
     display: flex;
@@ -300,7 +256,6 @@ input[type="checkbox"] {
   padding: 2%;
   width: 29%;
   text-align: center;
-  /**margin-bottom: -300px;**/
 }
 
 .figure img {
@@ -340,7 +295,7 @@ input[type="checkbox"] {
     margin-bottom: 40px; 
 }
 
-/* Lightbox styles */
+/***** Lightbox styles *****/
 
 .lightbox {
     display: none;   
@@ -379,11 +334,7 @@ input[type="checkbox"] {
     margin-bottom: 20px;
 }
 
-/* Members Page */
-
-/*#members-page-table {
-    border-left: 1px solid #525252;
-}*/
+/***** Members Page *****/
 
 #members-page-table, .right-align, .left-align {
     border: none;
@@ -394,24 +345,45 @@ input[type="checkbox"] {
    border-left: 1px solid #525252;
 }
 
-/* Admin Pages */
+/***** Admin Pages *****/
 
-/*#admin-nav {
-    margin-left: -12px;
-}*/
+#admin-nav {
+    height: 63px;
+    width: 100%;
+}
+
+#admin-nav-wrapper {
+    height: 63px;
+    max-width: 1170px;
+}
+
+#admin-nav ul {
+    padding-top: 15px;
+}
 
 #admin-nav a {
      font-family: montserrat;
      font-size: 18px;
 }
 
+.navbar2-fixed {
+    top: 70px;
+    position: fixed;
+    max-width: 1170px;
+    background: #fffeff;
+    border-bottom: 1px solid #545454;
+    box-shadow: 0 0 5px #000;
+}
+
 #admin-nav .admin-nav-search {
     float: right; 
-    position: relative;  
+    position: relative;
+    bottom: 2px;  
 }
 
 .search-form {
     position: relative;
+    margin-right: 10px;
 }
 
 .search-icon { 
@@ -438,7 +410,7 @@ a.admin-links:hover {
     color: #525252;
 }
 
-/* Table styles - users-index page */
+/***** Table styles - users-index page *****/
 
 table, th, td {
     border: 1px solid #525252;
@@ -446,7 +418,6 @@ table, th, td {
 }
 
 table {
-    /*border-spacing: 0;*/
     margin-bottom: 80px;
 }
 
@@ -465,41 +436,25 @@ td a {
 }
 
 td a:hover {
-    color: #87A972;
+    color: #736B5F;
 }
 
-/*tr:nth-of-type(odd) {
-    background-color: #ECE1B1;
-}*/
+/***** User and Product Edit Pages *****/
 
-/*tr:first-of-type {
-    /*background-color: #262626;*/
-    /*background-color: #68644F;
-    color: #fffeff; 
-}*/
-
-/* User and Product Edit Pages */
-
-#product-edit-form-div, #register-form-div, #login-form-div {
-    /*border-left: 1px solid #525252;*/
+#product-edit-form-div, #register-form-div, #login-form-div, #reset-form-div {
     margin-bottom: 20px;
     padding: 40px 20px;
     background: #fafafa	;
     font-size: 16px;	
 }
 
-
-
 .label, .select-label{
     display: inline-block;
     width: 150px;
     text-align: right;
     margin-right: 15px;
-    
     font-size: 16px;
-    /*font-weight: bold; */
     font-style: italic;
-   /* border: 1px solid red;  */
 }
 
 .label {
@@ -508,14 +463,11 @@ td a:hover {
     top: 10px;
 }
 
-/*.button-div {
-    width: 150px;
-    text-align: right;
-    margin-right: 15px;
-}*/
+.invalid-feedback {
+    margin-bottom: 20px;
+}
 
 .form-submit, .delete-submit {
-    /*margin-left: 120px;*/
     margin-left: 168px;
     padding: 5px 10px;
     font-size: 1em;
@@ -527,12 +479,7 @@ td a:hover {
     margin-bottom: 40px;
     margin-top: 20px;
     color: #525252;
-   
 }
-
-/*.login {
-    text-align: center;
-}*/
 
 .g-recaptcha {
     margin-top: 30px;
@@ -584,7 +531,7 @@ td a:hover {
     font-size: 16px;
 }
 
-/* Footer Styles */
+/***** Footer Styles *****/
 
 hr {
     width: 80%;
