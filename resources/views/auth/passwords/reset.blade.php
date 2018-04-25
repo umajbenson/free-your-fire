@@ -13,10 +13,12 @@
 @endsection
 
 @section('content')
+    @include('partials.show-messages')
     
     <div id="reset-form-div">
         <form method="POST" action="{{ route('password.request') }}">
             @csrf
+            <input name="token" type="text" value="{{ $token }}" style="display:none;">
 
             <div>
                 <label for="email" class="label">E-Mail Address</label>

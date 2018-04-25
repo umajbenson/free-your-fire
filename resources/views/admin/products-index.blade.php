@@ -13,8 +13,8 @@
 @endsection
 
 @section('content')
-    <table>
-        <tr>
+    <table id="product-table">
+        <tr class="thead-row">
             <th>Product name</th>
             <th>Description</th>
             <th>Price</th>

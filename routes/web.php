@@ -26,6 +26,9 @@ Route::get('/preowned', 'PagesController@preowned');
 
 Route::get('/show/{slug}', 'ProductController@show')->name('pages.show');
 
+Route::get('/contact', 'ContactController@create')->name('contact.create');
+Route::post('/contact', 'ContactController@store')->name('contact.store');
+
 Route::get('/members', 'PagesController@members');
 
 Route::get('/cart', 'PagesController@cart');

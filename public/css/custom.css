@@ -78,6 +78,7 @@ a {
 #branding {
     text-align: center;
     margin: -40px 0 20px 0;
+    position: relative;
 }
 
 h1 { 
@@ -132,7 +133,7 @@ header img {
 }
 
 .main-nav-ul {
-    width: 512px;
+    max-width: 600px;
     margin: 0 auto;
     padding-top: 25px;
     padding-bottom: 5px;   
@@ -203,7 +204,7 @@ main {
 
 #content-wrapper, #master-wrapper {
     max-width: 1170px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
     background: #fffeff;    
     font-family: montserrat;
     font-size: 18px;
@@ -418,8 +419,13 @@ table, th, td {
     border-collapse: collapse;
 }
 
+.table-div {
+    overflow-x: auto;
+}
+
 table {
     margin-bottom: 80px;
+    max-width: 100%;
 }
 
 td {
@@ -428,7 +434,9 @@ td {
 
 td, th {
     text-align: left;
-    padding: 15px;  
+    padding: 15px;
+    /*width: 100%;
+    height: auto; */ 
 }
 
 td a {
@@ -442,7 +450,7 @@ td a:hover {
 
 /***** User and Product Edit Pages *****/
 
-#product-edit-form-div, #register-form-div, #login-form-div, #reset-form-div {
+#product-edit-form-div, #register-form-div, #login-form-div, #reset-form-div, #contact-form-div {
     margin-bottom: 20px;
     padding: 40px 20px;
     background: #fafafa	;
@@ -581,15 +589,106 @@ footer img {
 
 #error-p {
     font-size: 20px;
-    /*margin-bottom: 180px;*/
+    margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+    #top-row-home {
+       flex-flow: wrap;
+       border: 1px solid red;
+    }
+
+    #top-row-home h3 {
+        display: inline-block;
+       /* margin-right: 15px;*/
+       border: 1px solid red;
+    }
+
+    #top-row-home img {
+        /*position: relative;
+        top: 9px;
+        right: 15px;*/
+        float: right;
+    }
+
+    #branding {
+        margin-top: 30px;
+    }
+
+    #left-flex {
+        width: 100%;
+        border: 1px solid red;
+        line-height: 45px;
+    }
+
+    /*#right-flex {
+        width: 50%;
+    }*/
 }
 
 
-@media only screen and (max-width: 686px) {
+@media only screen and (max-width: 1080px) {
     
+    /***** Style the tables for smaller screens *****/
   
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.thead-row { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	#product-table td:nth-of-type(1):before { content: "Product name"; }
+	#product-table td:nth-of-type(2):before { content: "Description"; }
+	#product-table td:nth-of-type(3):before { content: "Price"; }
+	#product-table td:nth-of-type(4):before { content: "Image"; }
+	#product-table td:nth-of-type(5):before { content: "Active"; }
+	#product-table td:nth-of-type(6):before { content: "Date created"; }
+	#product-table td:nth-of-type(7):before { content: "Date updated"; }
+	#product-table td:nth-of-type(8):before { content: "Edit"; }
+    #product-table td:nth-of-type(9):before { content: "Delete"; }
+    
+    #user-table td:nth-of-type(1):before { content: "User name"; }
+	#user-table td:nth-of-type(2):before { content: "Email"; }
+	#user-table td:nth-of-type(3):before { content: "Admin"; }
+	#user-table td:nth-of-type(4):before { content: "Active"; }
+	#user-table td:nth-of-type(5):before { content: "Date created"; }
+	#user-table td:nth-of-type(6):before { content: "Last update"; }
+	#user-table td:nth-of-type(7):before { content: "Edit"; }
+    #user-table td:nth-of-type(8):before { content: "Delete"; }
     
 }
+    
+
 
 
 

@@ -13,8 +13,9 @@
 @endsection
 
 @section('content')
-    <table>
-        <tr>
+<div class="table-div">
+    <table id="user-table">
+        <tr class="thead-row">
             <th>User name</th>
             <th>Email</th>
             <th>Admin</th>
@@ -34,12 +35,13 @@
             <td>{{ $user->is_active == true ? 'Yes' : 'No' }}</td>
             <td>{{ Carbon::parse($user->created_at)->format('m/d/Y') }}</td>
             <td>{{ Carbon::parse($user->updated_at)->format('m/d/Y') }}</td>
-            <td><a href="/admin/users/edit/{{ $user->id }}">Edit this user</a></td>
-            <td><a href="/admin/delete-user/{{ $user->id }}">Delete this user</a></td>
+            <td><a href="/admin/users/edit/{{ $user->id }}">Edit</a></td>
+            <td><a href="/admin/delete-user/{{ $user->id }}">Delete</a></td>
         </tr>
             @endif
             @endforeach
     </table>
+</div>
 @endsection
 
                                                         
