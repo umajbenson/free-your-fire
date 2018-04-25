@@ -11,6 +11,7 @@
  @section('h2')  
    Welcome  
 @endsection
+
 @if(env('PRODUCTION_MODE') == 'production')
     @section('content')
         <div class="flex">
@@ -31,12 +32,13 @@
                 <a href="/register"><button type="button" id="register">Sign Up</button></a>   
             </div>
         </div>
-        <div class="flex">
-        </div>
     @endsection
+
 @else
     @section('content')
-    {{ var_dump(env('PRODUCTION_READY')) }}
-        <h1>LANDING PAGE HERE</h1>
+    { { var_dump(env('PRODUCTION_READY')) }}
+        <p>This site is currently under construction. Please visit us on our launch date, May 30, 2018</p>
+        
     @endsection
+
 @endif

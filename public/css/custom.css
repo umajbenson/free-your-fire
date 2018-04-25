@@ -369,6 +369,7 @@ input[type="checkbox"] {
 .navbar2-fixed {
     top: 70px;
     position: fixed;
+    z-index: 1000;
     max-width: 1170px;
     background: #fffeff;
     border-bottom: 1px solid #545454;
@@ -544,7 +545,6 @@ hr {
     max-width: 1170px;
     margin: 0 auto;
     font-family: montserrat; 
-
     padding-bottom: 80px;
 }
 
@@ -554,7 +554,7 @@ footer div {
 }
 
 footer img {
-   width: 50px;
+    width: 50px;
     filter: opacity(.7);
     margin-right: 10px; 
 }
@@ -565,6 +565,23 @@ footer img {
 
 .hidden-input {
     display: none;
+}
+
+/***** Error message page *****/
+
+#error-h1 {
+    font-size: 45px;
+    color: #525252;
+    margin: 50px 0;
+}
+
+.center {
+    text-align: center;
+}
+
+#error-p {
+    font-size: 20px;
+    /*margin-bottom: 180px;*/
 }
 
 
