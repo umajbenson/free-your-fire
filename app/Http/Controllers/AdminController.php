@@ -141,4 +141,29 @@ class AdminController extends Controller
         //dd($request->queryString);
         return redirect('/admin/products?search=' . $request->queryString);
     }
+
+    public function addProduct()
+    {
+        $categoriesArray = [];
+        $categories = Category::all();
+
+        foreach($categories as $category) {
+        $categoriesArray = $categoriesArray + [$category->id => $category->name];
+        }
+
+        return view('admin.product-create')->with(compact('categoriesArray'));
+    }
+
+    public function storeProduct(Request $request)
+    {
+        $data = $request->except('_token');
+
+        $product = Product::create($data);
+
+        if ($product) {
+            return back()->with('message', 'Product Added!');
+        }
+
+        dd('nope');
+    }
 }
