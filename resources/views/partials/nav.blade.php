@@ -1,5 +1,6 @@
 <div id="nav-wrapper">
 <nav id="main-nav">
+
     <ul class="sm sm-mint main-nav-ul">
         <li><a class="main-nav-a" href="/">Home</a></li>
         <li><a class="main-nav-a" href="/about">About</a></li>
@@ -24,8 +25,8 @@
             </ul> 
         </li>
         <!--<li><a href="/show/five-dollar">$5 Finds</a></li>-->
-       
-
+        <li><a class="main-nav-a" href="/contact">Contact</a></li>
+    
         <li id="view-cart">
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
                 <input type="hidden" name="cmd" value="_s-xclick">
