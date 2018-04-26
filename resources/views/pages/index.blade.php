@@ -11,8 +11,10 @@
  @section('h2')  
    Welcome  
 @endsection
+
 @if(env('PRODUCTION_MODE') == 'production')
     @section('content')
+        @include('partials.show-messages')
         <div class="flex">
             <div id="flex-left">
                 <p>Free Your Fire is a treasure chest of unique items and ideas designed to enhance your individuality. As of our launch date in May 2018, our product selection consists exclusively of pre-owned jewelry. Many of these pieces are vintage items which have been collected from estates. Others are beautiful, fun and eclectic accessories that have been lightly worn.
@@ -31,12 +33,13 @@
                 <a href="/register"><button type="button" id="register">Sign Up</button></a>   
             </div>
         </div>
-        <div class="flex">
-        </div>
     @endsection
+
 @else
     @section('content')
-    {{ var_dump(env('PRODUCTION_READY')) }}
-        <h1>LANDING PAGE HERE</h1>
+    { { var_dump(env('PRODUCTION_READY')) }}
+        <p>This site is currently under construction. Please visit us on our launch date, May 30, 2018</p>
+        
     @endsection
+
 @endif

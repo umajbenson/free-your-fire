@@ -1,10 +1,10 @@
-<div class="flex">
-    <div>       
-        <h3>Free Shipping on orders $60 and up!</h3>
+<div class="flex" id="top-row-home">
+    <div id="left-flex">       
+        <h3 id="free-shipping">Free Shipping on orders $60 and up!</h3>
         <img src="/images/facebook1.svg">
         <img src="/images/twitter2.svg">
     </div>      
-    <div>
+    <div id="right-flex">
         <nav id="user-nav">
             <ul class="sm sm-mint user-nav-ul">
                 @if(Auth::user())                

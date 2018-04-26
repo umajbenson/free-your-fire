@@ -38,9 +38,7 @@
 
 <main>
     @yield('image')
-
-   
-    
+ 
     <div id="master-wrapper">
 
         @if(isset($admin))

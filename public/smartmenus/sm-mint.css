@@ -1,12 +1,12 @@
-.sm-mint {
+/*.sm-mint {
   border-top: 2px solid #8db863;
-  /*border-bottom: 2px solid #8db863;*/
+  border-bottom: 2px solid #8db863;
   background: #fff;
 }
 .sm-mint a, .sm-mint a:hover, .sm-mint a:focus, .sm-mint a:active {
-  padding: 13px 20px;
+  padding: 13px 20px;*/
   /* make room for the toggle button (sub indicator) */
-  padding-right: 58px;
+  /*padding-right: 58px;
   color: #333;
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -21,7 +21,7 @@
 }
 .sm-mint a.disabled {
   color: #cccccc;
-}
+}*/
 .sm-mint a .sub-arrow {
   position: absolute;
   top: 50%;
@@ -37,7 +37,7 @@
   background: rgba(141, 184, 99, 0.2);
   border-radius: 4px;
 }
-.sm-mint a .sub-arrow::before {
+/*.sm-mint a .sub-arrow::before {
   content: '+';
 }
 .sm-mint a.highlighted .sub-arrow::before {
@@ -49,10 +49,7 @@
 .sm-mint > li:first-child {
   border-top: 0;
 }
-.sm-mint ul {
-  /*background: rgba(141, 184, 99, 0.2);*/
-  /*background: #f6ffed;*/
-}
+
 .sm-mint ul a, .sm-mint ul a:hover, .sm-mint ul a:focus, .sm-mint ul a:active {
   font-size: 14px;
   border-left: 8px solid transparent;
@@ -80,9 +77,9 @@
 .sm-mint ul ul ul ul ul a:focus,
 .sm-mint ul ul ul ul ul a:active {
   border-left: 40px solid transparent;
-}
+}*/
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {*/
   /* Switch to desktop layout
   -----------------------------------------------
      These transform the menu tree from
@@ -335,6 +332,6 @@
   .sm-mint.sm-vertical ul a {
     padding: 10px 20px;
   }
-}
+/*}*/
 
 /*# sourceMappingURL=sm-mint.css.map */

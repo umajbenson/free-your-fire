@@ -43,7 +43,7 @@
 
         @include('partials.filters')   
 
-        @include('partials.sort')
+        <!--@ include('partials.sort')-->
 
         @include('partials.display_items')
     

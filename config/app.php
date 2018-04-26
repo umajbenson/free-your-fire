@@ -151,6 +151,7 @@ return [
          * Package Service Providers...
          */
         Collective\Html\HtmlServiceProvider::class,
+        Conner\Likeable\LikeableServiceProvider::class,
 
         /*
          * Application Service Providers...

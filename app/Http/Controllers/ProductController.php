@@ -101,6 +101,32 @@ class ProductController extends Controller
         return redirect($url);
     }
 
+    public function userLike($id)
+    {
+        $product = Product::where('id', $id)->first();
+
+        if ($product->liked()) {
+            return back()->with('message', 'You already liked that product.');
+        }
+
+        $product->like();
+
+        return back()->with('message', 'You liked that product!');
+    }
+
+    public function userUnlike($id)
+    {
+        $product = Product::where('id', $id)->first();
+
+        if (!$product->liked()) {
+            return back()->with('message', 'You already unliked that product.');
+        }
+
+        $product->unlike();
+
+        return back()->with('message', 'You unliked that product!');
+    }
+
     /*public function getAddToCart(Request $request, $id) {
         $product = Product::find($id);
         $oldCart = Session::has('cart') ? Session::get('cart') : null;

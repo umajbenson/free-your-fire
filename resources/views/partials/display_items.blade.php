@@ -13,6 +13,17 @@
                     <input type="image" src="/images/add-to-cart-button.png" border="0" name="submit" style="width: 134px; height: auto;" alt="PayPal - The safer, easier way to pay online!">
                     
                     </form>
+                    <p>{{ $product->likeCount }} users like this product</p>
+                @if(Auth::user())
+                    @if($product->liked())
+                        <p>LIKED!</p>
+                        <a href="/product/unlike/{{ $product->id }}">CLICK TO UNLIKE</a>
+                    @else
+                        <a href="/product/like/{{ $product->id }}">CLICK TO LIKE</a>
+                    @endif
+                @else
+                    <small>Register to like products!</small>
+                @endif
                          
             </div>
             <div class="lightbox">

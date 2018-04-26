@@ -26,6 +26,9 @@ Route::get('/preowned', 'PagesController@preowned');
 
 Route::get('/show/{slug}', 'ProductController@show')->name('pages.show');
 
+Route::get('/contact', 'ContactController@create')->name('contact.create');
+Route::post('/contact', 'ContactController@store')->name('contact.store');
+
 Route::get('/members', 'PagesController@members');
 
 Route::get('/cart', 'PagesController@cart');
@@ -46,7 +49,9 @@ Route::get('/edit-profile', 'UserController@getProfile');
 
 Route::post('/edit-profile', 'UserController@updateProfile');
 
+Route::get('/product/like/{product_id}', 'ProductController@userLike');
 
+Route::get('/product/unlike/{product_id}', 'ProductController@userUnlike');
 
 
 /*Route::get('/po-bracelets', function () {
@@ -74,6 +79,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('/products/edit/{id}', 'AdminController@editProduct')->name('products-edit');
     Route::post('/products/edit/{id}', 'AdminController@updateProduct'); 
     Route::post('/products/search', 'AdminController@submitSearch');
+    Route::get('/products/add-new', 'AdminController@addProduct');
+    Route::post('/products/add-new', 'AdminController@storeProduct');
     
 });
 

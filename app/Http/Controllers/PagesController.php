@@ -22,6 +22,10 @@ class PagesController extends Controller
         return view('pages.preowned');
     }
 
+    public function contact(){
+        return view('pages.contact');
+    }
+
     public function cart(){
         return view('pages.cart');
     }
