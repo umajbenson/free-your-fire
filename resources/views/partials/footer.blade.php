@@ -9,7 +9,8 @@
             <p>freeyourfire108@gmail.com</p>
         </div>
         <div>
-            <p>Site Design &copy; 2018 Uma J. Benson</p>
+            <p>Site Design &copy;&nbsp;2018<br>
+            Uma&nbsp;J.&nbsp;Benson</p>
         </div>
     </div>
 </footer>

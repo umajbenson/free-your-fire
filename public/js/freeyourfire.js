@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     addCurrentClass('.sm-mint a', '/', '/show', '/admin', '/admin', '.admin-home');
 
-    stickyNav1('#main-nav', 157);
+    stickyNav1('#main-nav', 160);
 
     stickyNav2('#admin-nav', 256);
 

@@ -18,7 +18,7 @@
     max-width: 1520px;
     margin: 0 auto;
     background: #fffeff;
-    padding-top: 15px;
+   /* padding-top: 15px;*/
     position: relative;
 }
 
@@ -29,14 +29,14 @@ a {
 .flex {
     display: flex;
     justify-content: space-between;
+    border: 1px solid red;
 }
 
-.flex div {
-    margin: 0 20px;
+#top-row-home {
+    padding: 10px 20px 0 20px;
 }
 
 #flex-left {
-    margin: 0;
     width: 66%;
     padding-right: 15px;
 }
@@ -107,6 +107,7 @@ header h3 {
     font-size: 16px;
     font-weight: normal;
     font-style: italic;
+    padding-top: 13px;
 }
 
 header img {
@@ -118,6 +119,10 @@ header img {
 #user-nav a {
     font-family: montserrat;
     font-size: 16px;
+}
+
+#user-nav-ul li a{
+   text-align: left;
 }
 
 #user-nav ul ul, #main-nav ul ul {
@@ -132,34 +137,41 @@ header img {
     font-size: 14px;
 }
 
-.main-nav-ul {
-    max-width: 600px;
-    margin: 0 auto;
-    padding-top: 25px;
-    padding-bottom: 5px;   
+#nav-wrapper {
+    height: 70px;
+    margin-top: 20px; 
+    border: 1px solid red;   
+      
 }
 
 #main-nav {
     height: 70px;
+    padding: 0 10px 10px 10px;
+    border: 1px solid red;   
+    
+}
+
+.main-nav-ul {
+    max-width: 625px;
+    margin: 0 auto;
+    padding-top: 27px;
+    border: 1px solid red;   
 }
 
 #main-nav a {
     font-family: montserrat;
     font-size: 18px;
+    padding-bottom: 20px;
+   /* border: 1px solid red;*/
 }
 
-.main-nav-a {
+/*.main-nav-a {
     padding-bottom: 12px;
-}
+}*/
 
 a.current {
     font-weight: bold;
     color: #525252;
-}
-
-#nav-wrapper {
-    height: 70px;
-    margin-top: 20px;   
 }
 
 .navbar-fixed {
@@ -215,10 +227,14 @@ main {
     text-align: center;
 }
 
+#shop-image {
+    width: 100%;
+    height: auto;
+}
+
 main h2 {
     font-family: "antro vectra";
-    font-size: 47px;
-    
+    font-size: 47px; 
     color: #525252;
     letter-spacing: 1px;
     padding: 20px 0;
@@ -592,37 +608,166 @@ footer img {
     margin-bottom: 100px;
 }
 
+/***** Media queries *****/
+
 @media only screen and (max-width: 768px) {
+
     #top-row-home {
        flex-flow: wrap;
-       border: 1px solid red;
     }
 
     #top-row-home h3 {
         display: inline-block;
-       /* margin-right: 15px;*/
-       border: 1px solid red;
+        padding-top: 0;
     }
 
     #top-row-home img {
-        /*position: relative;
-        top: 9px;
-        right: 15px;*/
         float: right;
     }
 
     #branding {
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
     #left-flex {
         width: 100%;
-        border: 1px solid red;
         line-height: 45px;
     }
+    #right-flex {
+        width: 100%;
+        margin-top: 10px;    
+    }
 
-    /*#right-flex {
-        width: 50%;
+    #user-nav {
+        float: right;
+    }
+
+    .sm-mint a, .sm-mint a:hover, .sm-mint a:focus, .sm-mint a:active, .sm-mint a.highlighted {
+        padding: 5px 10px;
+    }
+
+    #main-nav {
+        padding-bottom: 0;
+    }
+
+    #main-nav a {
+        font-size: 16px;
+        padding-bottom: 15px;
+    }
+
+    .main-nav-ul {
+        max-width: 510px;
+    }
+
+    .sm-mint a:hover {
+        color: #736B5F;
+        border-radius: 4px 4px 0 0;
+        background: #f6f6f6;
+    }
+
+    .sm-mint a.has-submenu {
+        padding-right: 20px;
+      }
+
+    .sm-mint a .sub-arrow {
+        right: 8px;
+    }
+
+    .sm-mint ul a, .sm-mint ul a:hover {
+        padding: 5px 10px;
+    }
+
+    #view-cart {
+        top: 1px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer div {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    #nav-wrapper, #main-nav {
+        height: 108px;
+    }
+
+    h1 {
+        font-size: 45px;
+        margin-top: -20px;
+    }
+
+    header h2 {
+        letter-spacing: 3px;
+        font-size: 12px;
+        margin-top: -15px;
+    }
+
+   main h2 {
+        font-size: 43px;
+    }
+
+    #branding {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #top-row-home img {
+        float: none;
+    }
+
+    #top-row-home h3 {
+        display: block;
+        font-size: 14px;
+    }
+
+    #user-nav {
+        margin-top: -65px;
+    }
+
+    #homeflex {
+        flex-flow: wrap;
+    }
+
+    #flex-left {
+        width: 100%;
+        margin-left: 0;
+        margin-top: -10px;
+    }
+
+    #flex-right {
+        width: 70%;
+        margin: 20px auto;
+        /*margin-left: 0;
+        padding-left: 0;
+        margin-top: 20px;*/
+        /*border: 1px solid red; */
+    }
+
+   
+
+
+
+   /* .sm-mint a, .sm-mint a:hover, .sm-mint a:focus, .sm-mint a:active, .sm-mint a.highlighted {
+        padding: 5px 10px;
+    }
+
+    .sm-mint a:hover {
+        color: #736B5F;
+        border-radius: 4px 4px 0 0;
+        background: #f6f6f6;
+    }
+
+    .sm-mint a.has-submenu {
+        padding-right: 34px;
+      }
+
+    .sm-mint ul a, .sm-mint ul a:hover {
+        padding: 5px 10px;
     }*/
 }
 

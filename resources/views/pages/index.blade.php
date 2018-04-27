@@ -15,7 +15,7 @@
 @if(env('PRODUCTION_MODE') == 'production')
     @section('content')
         @include('partials.show-messages')
-        <div class="flex">
+        <div class="flex" id="homeflex">
             <div id="flex-left">
                 <p>Free Your Fire is a treasure chest of unique items and ideas designed to enhance your individuality. As of our launch date in May 2018, our product selection consists exclusively of pre-owned jewelry. Many of these pieces are vintage items which have been collected from estates. Others are beautiful, fun and eclectic accessories that have been lightly worn.
 
