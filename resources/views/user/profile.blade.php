@@ -6,7 +6,7 @@
 
 @section('image')
 
-    <img src="/images/master2.jpg" width="1520" height="300">
+    <img class="hero-img" src="/images/master2.jpg" width="1520" height="300">
 @endsection
 
 

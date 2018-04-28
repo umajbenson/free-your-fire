@@ -5,11 +5,15 @@
 @endsection
 
 @section('h2')
-    Add a Product
+    <span id="admin-h2">Administrators</span>
 @endsection
 
 @section('image')
-    <img src="/images/crystals.jpg" width="1520" height="100">
+    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="100">
+@endsection
+
+@section('h3')
+    Add a Product
 @endsection
 
 @section('content') <div id="product-edit-form-div">

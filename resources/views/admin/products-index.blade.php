@@ -5,14 +5,19 @@
 @endsection
 
 @section('h2')
-    Products
+    <span id="admin-h2">Administrators</span>
 @endsection
 
 @section('image')
-    <img src="/images/crystals.jpg" width="1520" height="100">
+    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="100">
+@endsection
+
+@section('h3')
+    Products
 @endsection
 
 @section('content')
+<div class="table-div">
     <table id="product-table">
         <tr class="thead-row">
             <th>Product name</th>
@@ -43,6 +48,7 @@
             
          @endforeach
     </table>
+</div>
 @endsection
 
                                                         

@@ -29,7 +29,7 @@ a {
 .flex {
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 #top-row-home {
@@ -140,14 +140,14 @@ header img {
 #nav-wrapper {
     height: 70px;
     margin-top: 20px; 
-    border: 1px solid red;   
+    /*border: 1px solid red;*/   
       
 }
 
 #main-nav {
     height: 70px;
     padding: 0 10px 10px 10px;
-    border: 1px solid red;   
+    /*border: 1px solid red;*/   
     
 }
 
@@ -155,7 +155,7 @@ header img {
     max-width: 625px;
     margin: 0 auto;
     padding-top: 27px;
-    border: 1px solid red;   
+    /*border: 1px solid red;  */ 
 }
 
 #main-nav a {
@@ -205,7 +205,7 @@ main {
     padding-bottom: 30px;
 }
 
-#hero {
+.hero-img {
     width: 100%;
     height: auto;
 }
@@ -225,11 +225,6 @@ main {
 
 #content-wrapper {
     text-align: center;
-}
-
-#shop-image {
-    width: 100%;
-    height: auto;
 }
 
 main h2 {
@@ -320,11 +315,11 @@ input[type="checkbox"] {
 
 .inline-content {
   display: flex;
-  flex-flow: row;
 }
 
 .lightbox-photo {
-    width: 30%;
+    width: 50%;
+    max-width: 500px;
     padding: 40px 40px 20px 40px;
 }
 
@@ -346,9 +341,9 @@ input[type="checkbox"] {
 
 .lightbox-name {
     font-family: "antro vectra";
-    font-size: 47px;
+    font-size: 43px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /***** Members Page *****/
@@ -365,17 +360,21 @@ input[type="checkbox"] {
 /***** Admin Pages *****/
 
 #admin-nav {
-    height: 63px;
-    width: 100%;
+    height: 50px;
+   /* width: 100%;*/
+    margin: 0 auto;
 }
 
 #admin-nav-wrapper {
-    height: 63px;
-    max-width: 1170px;
+    height: 50px;
+   max-width: 100%;
+   /* margin-right: 20px;*/
 }
 
 #admin-nav ul {
-    padding-top: 15px;
+   padding-top: 5px;
+   max-width: 1170px;
+    
 }
 
 #admin-nav a {
@@ -384,43 +383,56 @@ input[type="checkbox"] {
 }
 
 .navbar2-fixed {
-    top: 70px;
+    top: 83px;
     position: fixed;
     z-index: 1000;
     max-width: 1170px;
+    width: 100%;
     background: #fffeff;
     border-bottom: 1px solid #545454;
     box-shadow: 0 0 5px #000;
 }
 
-#admin-nav .admin-nav-search {
+/*#admin-nav .admin-nav-search {
     float: right; 
     position: relative;
     bottom: 2px;  
-}
+}*/
+
+/*#admin-h2 {
+    margin-bottom: 0;
+}*/
 
 .search-form {
     position: relative;
-    margin-right: 10px;
+   /* margin-right: 10px;*/
+   /* margin-top: 10px;*/
+    margin-bottom: 30px;
 }
 
 .search-icon { 
     position: absolute;
-    right: 335px;
+    left: 5px;
     top: 12px;
     z-index: 999;
     color: #736B5F;
 }
 
-#admin-nav input {
+.search-form input {
     padding: 10px 100px 10px 32px;
     font-family: montserrat;
     font-size: 16px;
 }
 
+.admin-h3 {
+    font-family: "antro vectra";
+   /* margin-bottom: 15px;*/
+    font-size: 40px;
+}
+
 .admin-links {
     display: block;
-    color: #525252;
+    /*color: #525252;*/
     margin-bottom: 20px;
 }
 
@@ -650,6 +662,13 @@ footer img {
         padding-bottom: 0;
     }
 
+    .navbar-fixed {
+
+    }
+    #nav-wrapper, #main-nav {
+        height: 
+    }
+
     #main-nav a {
         font-size: 16px;
         padding-bottom: 15px;
@@ -671,6 +690,8 @@ footer img {
 
     .sm-mint a .sub-arrow {
         right: 8px;
+        z-index: 1;
+        /*top: 50%;*/
     }
 
     .sm-mint ul a, .sm-mint ul a:hover {
@@ -681,6 +702,11 @@ footer img {
         top: 1px;
     }
 
+    .navbar2-fixed {
+        top: 72px;
+        z-index: 9999;
+    }
+
     .footer {
         flex-direction: column;
     }
@@ -688,12 +714,46 @@ footer img {
     .footer div {
         margin-bottom: 10px;
     }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .row div {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    /***** Lightbox styles *****/
+
+    .inline-content {
+        flex-direction: column;
+    }
+
+    .lightbox-photo {
+        width: 75%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .lightbox-text {
+        width: 75%;
+        margin: 0 auto;
+    }
 }
 
 @media only screen and (max-width: 500px) {
 
     #nav-wrapper, #main-nav {
         height: 108px;
+    }
+
+    #admin-nav-wrapper, #admin-nav {
+        height: 85px;
+    }
+
+    .navbar2-fixed {
+        top: 112px;
     }
 
     h1 {
@@ -729,7 +789,9 @@ footer img {
         margin-top: -65px;
     }
 
-    #homeflex {
+
+
+    #home-flex, #about-flex {
         flex-flow: wrap;
     }
 
@@ -746,6 +808,11 @@ footer img {
         padding-left: 0;
         margin-top: 20px;*/
         /*border: 1px solid red; */
+    }
+
+    .row div {
+        width: 80%;
+        margin: 0 auto;
     }
 
    

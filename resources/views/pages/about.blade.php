@@ -5,7 +5,7 @@
 @endsection
 
 @section('image')
-    <img src="/images/master2.jpg" width="1520" height="300">
+    <img class="hero-img" src="/images/master2.jpg" width="1520" height="300">
 @endsection
 
 @section('h2')     
@@ -14,7 +14,7 @@
 
 @section('content')
 
-<div class="flex">
+<div class="flex" id="about-flex">
     <div id="flex-left">
         <p>At Free Your Fire, our mission is to connect people with objects that enhance their innate radiance and strengthen their inner voice. Currently this comes in the form of pre-owned and vintage jewelry, some of which has been in our family for many years. Soon we will also offer a limited selection of original handmade jewelry featuring precious metals and gemstones. Each of these stones has special qualities that can support and assist people in their daily lives. In the coming months, we plan to add a blog as well as inspirational music and books.</p>
 

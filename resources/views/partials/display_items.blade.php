@@ -32,7 +32,7 @@
                         <img src="{{ $product->image_path }}">
                     </div>
                     <div class="lightbox-text">
-                        <p class="lightbox-name">{{ $product->name }}</p>
+                        <h3 class="lightbox-name">{{ $product->name }}</h3>
                         <p class="center-products">{{ $product->description }}</p>
                         
                         <p class="center-products">${{ $product->price }}</p>

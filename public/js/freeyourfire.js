@@ -10,7 +10,7 @@ $(document).ready(function() {
 
     stickyNav1('#main-nav', 160);
 
-    stickyNav2('#admin-nav', 256);
+    stickyNav2('#admin-nav', 364);
 
     lightbox('.inline'); 
 });

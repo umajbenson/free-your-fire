@@ -5,7 +5,7 @@
 @endsection
 
 @section('image')
-    <img src="/images/crystals.jpg" width="1520" height="100" alt="photo of jewelry">
+    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="100" alt="photo of jewelry">
 @endsection
 
 @section('h2')     

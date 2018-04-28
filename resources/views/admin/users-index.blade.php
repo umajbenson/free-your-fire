@@ -5,11 +5,15 @@
 @endsection
 
 @section('h2')
-    Members
+    <span id="admin-h2">Administrators</span>
 @endsection
 
 @section('image')
-    <img src="/images/crystals.jpg" width="1520" height="100">   
+    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="100">   
+@endsection
+
+@section('h3')
+    Users
 @endsection
 
 @section('content')
