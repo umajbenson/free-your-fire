@@ -37,7 +37,7 @@
 
 @else
     @section('content')
-    { { var_dump(env('PRODUCTION_READY')) }}
+
         <p>This site is currently under construction. Please visit us on our launch date, May 30, 2018</p>
         
     @endsection
