@@ -17,6 +17,7 @@
 @endsection
 
 @section('content')
+@include('partials.show-messages')
     {!! Form::open(['id' => 'user-edit-form']) !!}
 
     <div class="align-left">

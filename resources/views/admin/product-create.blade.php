@@ -1,4 +1,4 @@
-@extends('layouts.master', ['admin' => true])
+@extends('layouts.master', ['admin' => true, 'productsSearch' => true])
 
 @section('title')
     Free Your Fire - Products Add New

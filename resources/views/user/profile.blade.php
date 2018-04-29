@@ -38,6 +38,7 @@
         {!! Form::submit('Update Profile', ['class' => 'form-submit', 'id' => "profile-submit"]) !!}
     </div>
 
+    <a href="/change-password"><button>Change your password</button></a>
 
     {!! Form::close() !!}
 @endsection

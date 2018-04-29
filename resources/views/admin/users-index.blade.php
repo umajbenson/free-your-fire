@@ -17,6 +17,7 @@
 @endsection
 
 @section('content')
+@include('partials.show-messages')
 <div class="table-div">
     <table id="user-table">
         <tr class="thead-row">

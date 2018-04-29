@@ -45,14 +45,6 @@ Route::post('/filter-products', 'ProductController@filter')->name('products.filt
 
 Route::get('/cart/{id}', 'ProductController@getAddToCart')->name('product.cart');
 
-Route::get('/edit-profile', 'UserController@getProfile');
-
-Route::post('/edit-profile', 'UserController@updateProfile');
-
-Route::get('/product/like/{product_id}', 'ProductController@userLike');
-
-Route::get('/product/unlike/{product_id}', 'ProductController@userUnlike');
-
 
 /*Route::get('/po-bracelets', function () {
     $products = DB::table('products_pro')->get();
@@ -89,4 +81,13 @@ Route::group(['prefix' => 'auth', 'middleware' => 'guest'], function() {
     Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('reset-email');
     Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
     Route::post('/password/reset/', 'Auth\ResetPasswordController@reset');
+});
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/change-password', 'UserController@changePassword');
+    Route::get('/edit-profile', 'UserController@getProfile');    
+    Route::post('/edit-profile', 'UserController@updateProfile');
+    Route::get('/product/like/{product_id}', 'ProductController@userLike');
+    Route::get('/product/unlike/{product_id}', 'ProductController@userUnlike');
+    Route::post('/change-password', 'UserController@submitChangePassword');
 });

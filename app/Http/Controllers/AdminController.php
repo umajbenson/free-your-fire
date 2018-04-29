@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\UpdateUserRequest;
+use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 use App\Models\Role;
 use App\Models\Category;
 use App\User;
@@ -57,7 +60,7 @@ class AdminController extends Controller
     }
 
 
-    public function updateUser($id, Request $request)
+    public function updateUser($id, UpdateUserRequest $request)
     {
         $user = User::where('id', $id)->first();
         $update = $user->update($request->except('_token'));
@@ -106,7 +109,7 @@ class AdminController extends Controller
     }
 
 
-    public function updateProduct($id, Request $request)
+    public function updateProduct($id, UpdateProductRequest $request)
     {
         $product = Product::where('id', $id)->first();
         $update = $product->update($request->except('_token'));
@@ -154,7 +157,7 @@ class AdminController extends Controller
         return view('admin.product-create')->with(compact('categoriesArray'));
     }
 
-    public function storeProduct(Request $request)
+    public function storeProduct(StoreProductRequest $request)
     {
         $data = $request->except('_token');
 

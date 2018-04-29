@@ -1,4 +1,4 @@
-@extends('layouts.master', ['admin' => true])
+@extends('layouts.master', ['admin' => true, 'productsSearch' => true])
 
 @section('title')
     Free Your Fire - Product List
@@ -17,6 +17,8 @@
 @endsection
 
 @section('content')
+@include('partials.show-messages')
+<a href="/admin/products/add-new">Add a new product</a>
 <div class="table-div">
     <table id="product-table">
         <tr class="thead-row">
@@ -30,7 +32,7 @@
             <th>Edit</th>
             <th>Delete</th>    
         </tr>
-        
+        @if($products->count() > 0)
         @foreach($products as $product)
             
             <tr>
@@ -47,6 +49,9 @@
             </tr>
             
          @endforeach
+         @else
+            <p>No Products found...</p>
+         @endif
     </table>
 </div>
 @endsection

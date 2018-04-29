@@ -13,6 +13,7 @@
 @endsection
 
 @section('content')
+@include('partials.show-messages')
     <a class="admin-links" href="/admin/users">Manage Members</a>
     <a class="admin-links" href="/admin/products">Manage Products</a>
 @endsection
