@@ -1,8 +1,8 @@
 <div class="flex" id="top-row-home">
     <div id="left-flex">       
         <h3 id="free-shipping">Free Shipping on orders $60 and up!</h3>
-        <img src="/images/facebook.svg">
-        <img src="/images/twitter.svg">
+        <img src="/images/facebook.svg" alt="Facebook icon">
+        <img src="/images/twitter.svg" alt="Twitter icon">
     </div>      
     <div id="right-flex">
         <nav id="user-nav">

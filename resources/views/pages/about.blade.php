@@ -5,7 +5,7 @@
 @endsection
 
 @section('image')
-    <img class="hero-img" src="/images/about-photo.jpg" width="1520" height="300">
+    <img class="hero-img" src="/images/about-photo.jpg" width="1520" height="300" alt="Necklace on amethyst geode">
 @endsection
 
 @section('h2')     
@@ -27,7 +27,7 @@
         <h3>Sign up for our newsletter!</h3>
          <p>Become a member to receive jewelry-care advice, wardrobe suggestions, gemstone info, new-product notifications, special promotions and more.</p>
 
-        <a href="/register"><button type="button" id="register">Sign Up</button></a>   
+        <a href="/newsletter" class="form-submit" id="signup">Sign Up</a>   
     </div>
 </div>
 

@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('title')     
-    Free Your Fire - Contact
+    Free Your Fire - Newsletter Signup
 @endsection
 
 @section('image')
-    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="100" alt="SHOWING">
+    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="100" alt="Row of crystals">
 @endsection
 
 @section('h2')     
@@ -14,29 +14,25 @@
 
 @section('content')
 
-<div id="contact-form-div">
+<div class="form-div">
     @include('partials.show-messages')
     
+    {!! Form::open(['route' => 'contact.submit.newsletter']) !!}
 
-{!! Form::open(['route' => 'contact.submit.newsletter']) !!}
+    <div>
+        {!! Form::label('name', 'Your Name', ['class' => 'label']) !!}
+        {!! Form::text('name', null, ['class' => 'text-field']) !!}
+    </div>
 
-<div>
-    {!! Form::label('name', 'Your Name', ['class' => 'label']) !!}
-    {!! Form::text('name', null, ['class' => 'text-field']) !!}
-</div>
+    <br>
+    <div>
+        {!! Form::label('email', 'E-mail Address', ['class' => 'label']) !!}
+        {!! Form::text('email', null, ['class' => 'text-field']) !!}
+    </div>
 
-<br>
-<div>
-    {!! Form::label('email', 'E-mail Address', ['class' => 'label']) !!}
-    {!! Form::text('email', null, ['class' => 'text-field']) !!}
-</div>
+    {!! Form::submit('Submit', ['class' => 'form-submit']) !!}
 
-<br>
-
-{!! Form::submit('Submit', ['class' => 'form-submit']) !!}
-
-{!! Form::close() !!}
-
+    {!! Form::close() !!}
 </div>
 
 @endsection

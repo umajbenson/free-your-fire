@@ -5,7 +5,7 @@
 @endsection
 
 @section('image')
-    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="100" alt="photo of jewelry">
+    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="100" alt="Row of crystals">
 @endsection
 
 @section('h2')     
@@ -13,8 +13,9 @@
 @endsection
 
 @section('content')
+    @include('partials.show-messages')
 
-    <div id="reset-form-div">
+    <div class="form-div">
         @if (session('status'))
             <div class="alert alert-success">
                 {{ session('status') }}
@@ -25,8 +26,7 @@
             @csrf
 
             <div>
-                <label for="email" class="label">E-Mail Address</label>
-               
+                <label for="email" class="label">E-Mail Address</label>   
                 <input id="email" type="email" class="text-field{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
 
                     @if ($errors->has('email'))
@@ -36,11 +36,9 @@
                     @endif     
             </div>
          
-            <div>
-                <button type="submit" class="form-submit">
-                    Send Password Reset Link
-                </button>
-            </div>    
+            <button type="submit" class="form-submit">
+                Send Password Reset Link
+            </button>    
         </form>
     </div>
 @endsection

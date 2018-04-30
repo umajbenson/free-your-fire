@@ -5,7 +5,7 @@
 @endsection
 
 @section('image')
-<img class="hero-img" src="/images/about-photo.jpg" width="1520" height="300">
+<img class="hero-img" src="/images/about-photo.jpg" width="1520" height="300" alt="Necklace on amethyst geode">
 @endsection
 
 @section('h2')     

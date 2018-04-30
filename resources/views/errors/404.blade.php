@@ -1,7 +1,7 @@
 @extends('layouts.master')	
 
 @section('image')
-    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="100">
+    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="100" alt="Row of crystals">
 @endsection
 
 @section('content')

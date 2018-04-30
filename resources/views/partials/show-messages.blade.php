@@ -13,7 +13,7 @@
 @endif
 
 @if(Session::has('status'))
-    <div style="position: absolute; top: 5px; left: 5px; padding: 50px; background-color: red;">
-        <small style="color: white;">{{ Session::get('status') }}</small>
+    <div class="messages">
+        <small>{{ Session::get('status') }}</small>
     </div>
 @endif

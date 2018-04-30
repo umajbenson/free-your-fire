@@ -39,9 +39,7 @@
 <main>
     @yield('image')
  
-    <div id="master-wrapper">
-
-        <!--<h2 id="master-h2">@ yield('h2')</h2> --> 
+    <div id="master-wrapper"> 
         
         @yield('h2')
 
@@ -55,11 +53,10 @@
 
     </div> <!-- end #master-wrapper -->
 </main>
-
-<footer>
     <hr>
-    @include('partials.footer')
-</footer>
+
+@include('partials.footer')
+
 </div>
 </body>
 </html>

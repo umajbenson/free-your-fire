@@ -5,7 +5,7 @@
 @endsection
 
 @section('image')
-    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="100" alt="SHOWING">
+    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="100" alt="Row of crystals">
 @endsection
 
 @section('h2')     
@@ -14,13 +14,12 @@
 
 @section('content')
 
-    <div id="login-form-div">
+    <div class="form-div">
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
             <div>
-                <label for="email" class="label">E-Mail Address</label>
-                
+                <label for="email" class="label">E-Mail Address</label>       
                 <input id="email" type="email" class="text-field{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                     @if ($errors->has('email'))
@@ -33,7 +32,6 @@
             <br>
             <div>
                 <label for="password" class="label">Password</label>
-                
                 <input id="password" type="password" class="text-field{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                     @if ($errors->has('password'))
@@ -50,13 +48,13 @@
                 </label>          
             </div>
 
-            <br>
             <div class="login">                                  
                 <button type="submit" class="form-submit">
                     Login
                 </button>
             </div>
-            <div class="login">
+
+            <div id="login-buttons-div">
                 <a class="login-buttons" href="{{ route('reset-password') }}">
                         Forgot Your Password?</a>
                 <a class= "login-buttons" href="/register"> Register a New Account</a>              

@@ -5,7 +5,7 @@
 @endsection
 
 @section('image')     
-    <img class="hero-img" width=1520 height=300 src="{{ $image }}">   
+    <img class="hero-img" width=1520 height=300 src="{{ $image }}" alt="Photo of jewelry category">   
 @endsection
      
 <?php 

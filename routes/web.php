@@ -11,61 +11,33 @@
 |
 */
 
-
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
 Route::get('/', 'PagesController@index')->name('pages.index');
-
 Route::get('/about', 'PagesController@about');
 
-Route::get('/handmade', 'PagesController@handmade');
+//Route::get('/handmade', 'PagesController@handmade');
 
 Route::get('/preowned', 'PagesController@preowned');
-
 Route::get('/show/{slug}', 'ProductController@show')->name('pages.show');
-
 Route::get('/contact', 'ContactController@create')->name('contact.create');
 Route::post('/contact', 'ContactController@store')->name('contact.store');
 Route::get('/newsletter', 'ContactController@viewNewsletter')->name('contact.newsletter');
 Route::post('/newsletter', 'ContactController@submitNewsletter')->name('contact.submit.newsletter');
-
 Route::get('/members', 'PagesController@members');
-
-Route::get('/cart', 'PagesController@cart');
-
 Route::get('/login', 'LoginController@login');
-
 Route::get('/logout', 'Auth\LoginController@logout');
-
 Route::get('/register', 'RegisterController@register');
-
-Route::get('/add-to-cart/{id}', 'ProductController@getAddToCart')->name('product.addToCart');
-
 Route::post('/filter-products', 'ProductController@filter')->name('products.filter');
 
-Route::get('/cart/{id}', 'ProductController@getAddToCart')->name('product.cart');
-
-
-/*Route::get('/po-bracelets', function () {
-    $products = DB::table('products_pro')->get();
-    return $products;
-   // return view('products', compact('products'));
-});*/
-
-
+//Route::get('/cart', 'PagesController@cart');
+//Route::get('/add-to-cart/{id}', 'ProductController@getAddToCart')->name('product.addToCart');
+//Route::get('/cart/{id}', 'ProductController@getAddToCart')->name('product.cart');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-//Route::get('/admin', 'AdminController@index')->name('admin');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('/', 'AdminController@index');
     Route::get('/delete-user/{id}', 'AdminController@deleteUser');
     Route::get('/delete-product/{id}', 'AdminController@deleteProduct');
-    
     Route::get('/users', 'AdminController@usersIndex');
     Route::get('/users/edit/{id}', 'AdminController@editUser')->name('users-edit'); 
     Route::post('/users/edit/{id}', 'AdminController@updateUser');

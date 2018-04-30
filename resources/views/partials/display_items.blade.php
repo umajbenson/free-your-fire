@@ -17,9 +17,9 @@
                 @if(Auth::user())
                     @if($product->liked())
                         <p>LIKED!</p>
-                        <a href="/product/unlike/{{ $product->id }}">CLICK TO UNLIKE</a>
+                        <a href="/product/unlike/{{ $product->id }}">UNLIKE</a>
                     @else
-                        <a href="/product/like/{{ $product->id }}">CLICK TO LIKE</a>
+                        <a href="/product/like/{{ $product->id }}">LIKE</a>
                     @endif
                 @else
                     <small>Register to like products!</small>

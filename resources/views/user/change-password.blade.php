@@ -1,14 +1,12 @@
 @extends('layouts.master')
 
 @section('title')
-    Edit Profile
+    Change Password
 @endsection
 
 @section('image')
-
-    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="300">
+    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="300" alt="Row of crystals">
 @endsection
-
 
 @section('h2')
     <h2 class="master-h2">Change your password</h2>
@@ -17,19 +15,27 @@
 @section('content')
     @include('partials.show-messages')
         
-    <div id="reset-form-div">
+    <div class="form-div">
         {!! Form::open() !!}
 
-        {!! Form::label('current_password', 'Current Password') !!}
-        {!! Form::password('current_password') !!}
+       <div>
+            {!! Form::label('current_password', 'Current Password', ['class' => 'label']) !!}
+            {!! Form::password('current_password', ['class' => 'text-field']) !!}
+       </div>
 
-        {!! Form::label('new_password', 'New Password') !!}
-        {!! Form::password('new_password') !!}
+        <br>
+        <div>
+            {!! Form::label('new_password', 'New Password', ['class' => 'label']) !!}
+            {!! Form::password('new_password', ['class' => 'text-field']) !!}
+        </div>
 
-        {!! Form::label('new_password_confirmation', 'New Password Confirmation') !!}
-        {!! Form::password('new_password_confirmation') !!}
+        <br>
+        <div>
+            {!! Form::label('new_password_confirmation', 'New Password Confirmation', ['class' => 'label']) !!}
+            {!! Form::password('new_password_confirmation', ['class' => 'text-field']) !!}
+        </div>
 
-        {!! Form::submit('Change Password') !!}
+        {!! Form::submit('Change Password', ['class' => 'form-submit']) !!}
 
         {!! Form::close() !!}
     </div>
