@@ -9,7 +9,7 @@
 @endsection
 
 @section('h2')     
-    Login
+    <h2 class="master-h2">Login</h2>
 @endsection
 
 @section('content')

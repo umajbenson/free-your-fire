@@ -229,10 +229,19 @@ main {
 
 main h2 {
     font-family: "antro vectra";
-    font-size: 47px; 
+    font-size: 50px; 
     color: #525252;
     letter-spacing: 1px;
     padding: 20px 0;
+    text-transform: lowercase;
+}
+
+#pre-owned-h2 {
+    text-align: center;
+}
+
+.center-h2 {
+    text-align: center;
 }
 
 .link-hover:hover {
@@ -375,24 +384,23 @@ input[type="checkbox"] {
 #admin-nav {
     height: 50px;
    /* width: 100%;*/
-    margin: 0 auto;
+   /* margin: 0 auto;*/
 }
 
 #admin-nav-wrapper {
     height: 50px;
-   max-width: 100%;
+    max-width: 100%;
    /* margin-right: 20px;*/
 }
 
 #admin-nav ul {
    padding-top: 5px;
-   max-width: 1170px;
-    
+   max-width: 1170px;   
 }
 
 #admin-nav a {
-     font-family: montserrat;
-     font-size: 18px;
+    font-family: montserrat;
+    font-size: 18px;
 }
 
 .navbar2-fixed {
@@ -438,9 +446,9 @@ input[type="checkbox"] {
 }
 
 .admin-h3 {
-    font-family: "antro vectra";
+    font-family: "montserrat";
    /* margin-bottom: 15px;*/
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .admin-links {

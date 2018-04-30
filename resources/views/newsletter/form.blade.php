@@ -9,15 +9,16 @@
 @endsection
 
 @section('h2')     
-    <h2 class="master-h2">contact</h2>
+    <h2 class="master-h2>">Newsletter Signup</h2>
 @endsection
 
 @section('content')
 
 <div id="contact-form-div">
     @include('partials.show-messages')
+    
 
-{!! Form::open(['route' => 'contact.store']) !!}
+{!! Form::open(['route' => 'contact.submit.newsletter']) !!}
 
 <div>
     {!! Form::label('name', 'Your Name', ['class' => 'label']) !!}
@@ -31,10 +32,6 @@
 </div>
 
 <br>
-<div>
-    {!! Form::label('message', 'Message', ['class' => 'label']) !!}
-    {!! Form::textarea('msg', null, ['class' => 'text-field']) !!}
-</div>
 
 {!! Form::submit('Submit', ['class' => 'form-submit']) !!}
 

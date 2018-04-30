@@ -1,3 +1,6 @@
+/* Admin User: uma@uma.com, 123456
+   Registered User: michael@michael.com, 123456 */
+
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: free_your_fire

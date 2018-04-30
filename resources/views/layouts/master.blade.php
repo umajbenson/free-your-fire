@@ -41,13 +41,15 @@
  
     <div id="master-wrapper">
 
-        <h2 id="master-h2">@yield('h2')</h2>       
+        <!--<h2 id="master-h2">@ yield('h2')</h2> --> 
+        
+        @yield('h2')
 
         @if(isset($admin))
             @include('partials.admin-nav')
         @endif
 
-        <h3 class="admin-h3">@yield('h3')</h3>
+        @yield('h3')
 
         @yield('content')
 

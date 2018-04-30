@@ -5,7 +5,7 @@
 @endsection
 
 @section('h2')
-    <span id="admin-h2">Administrators</span>
+    <h2 class="master-h2" id="admin-h2">administrators</h2>
 @endsection
 
 @section('image')
@@ -13,7 +13,7 @@
 @endsection
 
 @section('h3')
-    Edit Products
+    <h3 class="admin-h3">edit products</h3>
 @endsection
 
 @section('content')

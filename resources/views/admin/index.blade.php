@@ -5,7 +5,7 @@
 @endsection
 
 @section('h2')
-    <span id="admin-h2">Administrators</span>
+    <h2 class="master-h2" id="admin-h2">administrators</h2>
 @endsection
 
 @section('image')

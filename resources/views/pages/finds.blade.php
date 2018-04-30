@@ -10,5 +10,5 @@
  @endsection
      
  @section('h2')
-    $5 Finds
+    <h2 class="master-h2">$5 Finds</h2>
  @endsection

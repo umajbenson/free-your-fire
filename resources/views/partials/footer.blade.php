@@ -1,8 +1,8 @@
 <footer>
     <div class="footer">
         <div>
-            <img src="/images/facebook1.svg">
-            <img src="/images/twitter2.svg">
+            <img src="/images/facebook.svg">
+            <img src="/images/twitter.svg">
         </div>
         <div>
             <p>Customer Service: 555-555-5555</p>

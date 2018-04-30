@@ -5,11 +5,11 @@
 @endsection
 
 @section('image')
-    <img class="hero-img" src="/images/master2.jpg" width="1520" height="300">
+    <img class="hero-img" src="/images/about-photo.jpg" width="1520" height="300">
 @endsection
 
 @section('h2')     
-    Pre-owned Jewelry
+    <h2 class="master-h2" id="pre-owned-h2">pre-owned jewelry</h2>
 @endsection
 
 @section('content')
@@ -19,7 +19,7 @@
     <div class="row">
         <div>
             <a href="/show/pre-owned-earrings">
-                <img src="/images/tashkent-panchpoya-earrings1.jpg">
+                <img src="/images/tashkent-panchpoya-earrings.jpg">
                 <p class="text-overlay">Earrings</p>
             </a>
         </div>
@@ -45,7 +45,7 @@
         </div>
         <div>
             <a href="/show/pre-owned-brooches">
-                <img src="/images/preowned-brooches1.jpg">
+                <img src="/images/preowned-brooches.jpg">
                 <p class="text-overlay">Brooches</p>
             </a>      
         </div>

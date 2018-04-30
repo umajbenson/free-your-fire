@@ -39,7 +39,7 @@
     @yield('image')
     
     <div id="content-wrapper"> 
-        <h2 id="product-h2">@yield('category-h2')</h2>
+        @yield('category-h2')
 
         @include('partials.filters')   
 

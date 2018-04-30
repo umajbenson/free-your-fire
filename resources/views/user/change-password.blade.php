@@ -6,12 +6,12 @@
 
 @section('image')
 
-    <img class="hero-img" src="/images/master2.jpg" width="1520" height="300">
+    <img class="hero-img" src="/images/crystals.jpg" width="1520" height="300">
 @endsection
 
 
 @section('h2')
-    Change your password
+    <h2 class="master-h2">Change your password</h2>
 @endsection
 
 @section('content')

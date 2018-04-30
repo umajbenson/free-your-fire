@@ -11,12 +11,12 @@
 <?php 
 if ($category != 'Five-Dollar') {?>
     @section('category-h2')
-        Pre-owned {{ $category }}
+        <h2>pre-owned {{ $category }}</h2>
     @endsection
 <?php } 
 else { ?>
     @section('category-h2')
-        Five-dollar Finds
+        <h2>five-dollar finds</h2>
     @endsection    
 <?php }
 ?>

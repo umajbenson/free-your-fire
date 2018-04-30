@@ -9,5 +9,5 @@
 @endsection
 
 @section('h2')     
-    Handmade Jewelry
+    <h2 class="master-h2">Handmade Jewelry</h2>    
 @endsection

@@ -5,11 +5,11 @@
 @endsection
 
 @section('image')     
-    <img class="hero-img" src="/images/banner-photo-crop1.jpg"> 
+    <img class="hero-img" src="/images/home-photo.jpg"> 
 @endsection
 
  @section('h2')  
-   Welcome  
+    <h2 class="master-h2">welcome</h2>  
 @endsection
 
 @if(env('PRODUCTION_MODE') == 'production')
@@ -23,14 +23,14 @@
 
                 <p>Check back often, as we will soon be adding handmade gemstone jewelry which is both decorative and functional. These pieces focus on gemstone qualities such as healing, protection, and strength to assist you in your daily life. Each piece comes with a guide to help you maximize its benefits.</p>
                 
-                <p>If you would like to be notified of the arrival of our handmade jewelry line, <a class="link-hover" href="/register"><em>register as a member</em></a> and be sure the box is checked to sign up for our newsletter. You will also receive lots of useful information about our products and related topics.</p>
+                <p>If you would like to be notified of the arrival of our handmade jewelry line, <a class="link-hover" href="/newsletter"><em>register as a member</em></a> and be sure the box is checked to sign up for our newsletter. You will also receive lots of useful information about our products and related topics.</p>
             </div>
 
             <div id="flex-right">
                 <h3>Sign up for our newsletter!</h3>
                 <p>Become a member to receive jewelry-care advice, wardrobe suggestions, gemstone info, new-product notifications, special promotions and more.</p>
 
-                <a href="/register"><button type="button" id="register">Sign Up</button></a>   
+                <a href="/newsletter"><button type="button" id="register">Sign Up</button></a>   
             </div>
         </div>
     @endsection
