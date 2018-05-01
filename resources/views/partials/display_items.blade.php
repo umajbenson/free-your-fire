@@ -2,7 +2,7 @@
     <div class="row">
         @foreach($productChunk as $product)
             <div class="figure">
-                <a class='inline' href="#inline-content-{{ $product->id }}"><img src="{{ $product->image_path }}"></a>
+                <a class='inline' href="#inline-content-{{ $product->id }}"><img src="{{ $product->image_path }}" alt="Product image"></a>
                 <p class="center-products">{{ $product->name }}</p>
                 <p class="center-products">${{ $product->price }}</p>
                 
@@ -29,7 +29,7 @@
             <div class="lightbox">
                 <div id="inline-content-{{ $product->id }}" class="inline-content">
                     <div class="lightbox-photo">
-                        <img src="{{ $product->image_path }}">
+                        <img src="{{ $product->image_path }}" alt="Product image">
                     </div>
                     <div class="lightbox-text">
                         <h3 class="lightbox-name">{{ $product->name }}</h3>

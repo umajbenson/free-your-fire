@@ -1,8 +1,8 @@
 <footer>
     <div class="footer-div">
         <div>
-            <img src="/images/facebook.svg" alt="Facebook icon">
-            <img src="/images/twitter.svg" alt="Twitter icon">
+            <a href="http://facebook.com" target="blank"><img src="/images/facebook.svg" alt="Facebook icon"></a>
+            <a href="http://twitter.com" target="blank"><img src="/images/twitter.svg" alt="Twitter icon"></a>
         </div>
         <div>
             <p>Customer Service: 555-555-5555</p>

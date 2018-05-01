@@ -1,8 +1,8 @@
 <div class="flex" id="top-row-home">
     <div id="left-flex">       
         <h3 id="free-shipping">Free Shipping on orders $60 and up!</h3>
-        <img src="/images/facebook.svg" alt="Facebook icon">
-        <img src="/images/twitter.svg" alt="Twitter icon">
+        <a href="http://facebook.com" target="blank"><img src="/images/facebook.svg" alt="Facebook icon"></a>
+        <a href="http://twitter.com" target="blank"><img src="/images/twitter.svg" alt="Twitter icon"></a>
     </div>      
     <div id="right-flex">
         <nav id="user-nav">
@@ -33,7 +33,7 @@
 </div> <!-- end flexbox -->
 
 <div id="branding"> 
-    <h1><a href="/">Free&nbsp;your&nbsp;Fire</a></h1>
+   <h1><a href="/">Free&nbsp;your&nbsp;Fire</a></h1>
     <h2>Asheville North Carolina &nbsp;&nbsp;</h2>
 </div>
    

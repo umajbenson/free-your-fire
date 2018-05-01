@@ -3,6 +3,7 @@
     src: url('/fonts/Antro_Vectra.otf') ;
 }
 
+/* alternate font */
 /*@font-face {
     font-family: "oh samantha";
     src: url("../fonts/oh-samantha demo.ttf");
@@ -18,7 +19,6 @@
     max-width: 1520px;
     margin: 0 auto;
     background: #fffeff;
-   /* padding-top: 15px;*/
     position: relative;
 }
 
@@ -29,7 +29,6 @@ a {
 .flex {
     display: flex;
     justify-content: space-between;
-    /*border: 1px solid red;*/
 }
 
 #top-row-home {
@@ -38,7 +37,7 @@ a {
 
 #flex-left {
     width: 66%;
-    padding-right: 15px;
+    padding-right: 60px;
 }
 
 #flex-left p {
@@ -47,27 +46,11 @@ a {
 
 #flex-right {
     width: 33%;
-    padding-left: 15px; 
 }
 
 #flex-right p {
     font-size: 16px;
     margin-top: 15px;
-}
-
-#register {
-   /* background: #cccccc;
-    background: -webkit-linear-gradient(#cccccc, #444444);
-    background: linear-gradient(#cccccc, #444444);
-    border: 1px solid #999999;
-    border-radius: 1000px;
-    padding: 8px 20px;
-    margin-top: 20px;
-    color:#ffffff;
-    display: inline-block;
-    font: normal 700 18px/1 "Montserrat", sans-serif;
-    text-align: center;
-    text-shadow: 1px 1px #000000;*/
 }
 
 #signup {
@@ -143,35 +126,25 @@ header img {
 
 #nav-wrapper {
     height: 70px;
-    margin-top: 20px; 
-    /*border: 1px solid red;*/   
-      
+    margin-top: 20px;       
 }
 
 #main-nav {
     height: 70px;
-    padding: 0 10px 10px 10px;
-    /*border: 1px solid red;*/   
-    
+    padding: 0 10px 10px 10px;     
 }
 
 .main-nav-ul {
     max-width: 625px;
     margin: 0 auto;
     padding-top: 27px;
-    /*border: 1px solid red;  */ 
 }
 
 #main-nav a {
     font-family: montserrat;
     font-size: 18px;
     padding-bottom: 20px;
-   /* border: 1px solid red;*/
 }
-
-/*.main-nav-a {
-    padding-bottom: 12px;
-}*/
 
 a.current {
     font-weight: bold;
@@ -188,7 +161,7 @@ a.current {
     box-shadow: 0 0 5px #000;
 }
 
-/***** cart icon for Stripe *****/
+/* cart icon for Stripe - to be added */
 /*#cart {
   position: fixed;
   top: 70px;
@@ -252,11 +225,6 @@ main h2 {
     color: #525252;
 }
 
-input[type="checkbox"] {
-   /* margin-right: 10px;*/
-   /* width: 30px;*/
-}
-
 .nowrap {
     white-space: nowrap;
     display: inline-block;
@@ -276,6 +244,7 @@ input[type="checkbox"] {
     border-radius: 8px;
 }
 
+/* sort function to be added later */
 /*#sort {
     display: block;
     font-family: montserrat;
@@ -381,24 +350,19 @@ input[type="checkbox"] {
 
 .right-align {
    text-align: right;
-   border-left: 1px solid #525252;
 }
 
 /***** Admin Pages *****/
 
 #admin-nav {
     height: 50px;
-   /* width: 100%;*/
-   /* margin: 0 auto;*/
   /* border: 1px solid red;*/
 }
 
 #admin-nav-wrapper {
     height: 50px;
     max-width: 100%;
-   /* margin-right: 20px;*/
-   margin-bottom: 60px;
-   
+    margin-bottom: 60px; 
 }
 
 #admin-nav ul {
@@ -412,7 +376,6 @@ input[type="checkbox"] {
     font-family: montserrat;
     font-size: 18px;
    /* border: 1px solid red;*/
-   /* padding-left: 0;*/
 }
 
 .navbar2-fixed {
@@ -426,19 +389,8 @@ input[type="checkbox"] {
     box-shadow: 0 0 5px #000;
 }
 
-/*#admin-nav .admin-nav-search {
-    float: right; 
-    position: relative;
-    bottom: 2px;  
-}*/
-
-/*#admin-h2 {
-    margin-bottom: 0;
-}*/
-
 .search-form {
     position: relative;
-   /* margin-right: 10px;*/
     margin-top: -20px;
     margin-bottom: 40px;
 }
@@ -457,7 +409,6 @@ input[type="checkbox"] {
     font-size: 16px;
 }
 
-
 .admin-h3 {
     font-family: "montserrat";
     margin-bottom: 30px;
@@ -467,7 +418,6 @@ input[type="checkbox"] {
 
 .admin-links {
     display: block;
-    /*color: #525252;*/
     margin-bottom: 20px;
 }
 
@@ -498,8 +448,6 @@ td {
 td, th {
     text-align: left;
     padding: 15px;
-    /*width: 100%;
-    height: auto; */ 
 }
 
 td a {
@@ -513,8 +461,6 @@ td a:hover {
 
 /***** User and Product Edit Pages *****/
 
-/*#product-edit-form-div, #register-form-div, #login-form-div, #reset-form-div, #contact-form-div*/
-
 #add-new:hover {
     background: #f6f6f6;
 }
@@ -526,8 +472,7 @@ td a:hover {
 .add-new {
     padding-bottom: 40px;
     color: #525252;
-    font-style: italic;
-    
+    font-style: italic;  
 }
 
 .form-div {
@@ -565,7 +510,6 @@ td a:hover {
     background: linear-gradient(to bottom, rgba(250,250,250,1) 40%, rgba(188,188,188,1));
     border-radius: 5px;
     box-shadow: 0 0 4px #fffeff;
-   /* margin-bottom: 30px;*/
     margin-top: 30px;
     color: #525252;
 }
@@ -613,13 +557,9 @@ a#change-password-link:hover {
 }
 
 .delete-submit {
-    margin-left: 85px;
+    margin-left: 180px;
     margin-bottom: 20px;
 }
-
-/*#profile-submit {
-    margin-top: 20px;
-}*/
 
 .text-field {
     border-radius: 5px; 
@@ -706,6 +646,29 @@ footer img {
 
 @media only screen and (max-width: 768px) {
 
+    #flex-left {
+        padding-right: 30px;
+    }
+
+    .label {
+        display: block;
+        text-align: left;
+        top: 0;
+    }
+
+    .select-label {
+        text-align: left;
+        width: 60px;
+    }
+
+    .form-submit {
+        margin-left: 0;
+    }
+
+    #change-password-link {
+        margin-left: 0;
+    }
+
     #top-row-home {
        flex-flow: wrap;
     }
@@ -744,13 +707,6 @@ footer img {
         padding-bottom: 0;
     }
 
-    .navbar-fixed {
-
-    }
-    #nav-wrapper, #main-nav {
-        height: 
-    }
-
     #main-nav a {
         font-size: 16px;
         padding-bottom: 15px;
@@ -773,7 +729,6 @@ footer img {
     .sm-mint a .sub-arrow {
         right: 8px;
         z-index: 1;
-        /*top: 50%;*/
     }
 
     .sm-mint ul a, .sm-mint ul a:hover {
@@ -826,6 +781,15 @@ footer img {
 
 @media only screen and (max-width: 500px) {
 
+    #flex-left {
+        padding-right: 0;
+    }
+
+    .form-div {
+        padding: 0;
+        background: #fffeff;
+    }
+
     #nav-wrapper, #main-nav {
         height: 108px;
     }
@@ -871,8 +835,6 @@ footer img {
         margin-top: -65px;
     }
 
-
-
     #home-flex, #about-flex {
         flex-flow: wrap;
     }
@@ -886,9 +848,6 @@ footer img {
     #flex-right {
         width: 70%;
         margin: 20px auto;
-        /*margin-left: 0;
-        padding-left: 0;
-        margin-top: 20px;*/
         /*border: 1px solid red; */
     }
 
@@ -896,50 +855,29 @@ footer img {
         width: 80%;
         margin: 0 auto;
     }
-
-   
-
-
-
-   /* .sm-mint a, .sm-mint a:hover, .sm-mint a:focus, .sm-mint a:active, .sm-mint a.highlighted {
-        padding: 5px 10px;
-    }
-
-    .sm-mint a:hover {
-        color: #736B5F;
-        border-radius: 4px 4px 0 0;
-        background: #f6f6f6;
-    }
-
-    .sm-mint a.has-submenu {
-        padding-right: 34px;
-      }
-
-    .sm-mint ul a, .sm-mint ul a:hover {
-        padding: 5px 10px;
-    }*/
 }
-
 
 @media only screen and (max-width: 1080px) {
     
     /***** Style the tables for smaller screens *****/
   
 	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr { 
+	.table-div table, .table-div thead, .table-div tbody, .table-div th, .table-div td, .table-div tr { 
 		display: block; 
 	}
 	
 	/* Hide table headers (but not display: none;, for accessibility) */
-	.thead-row { 
+	.table-div .thead-row { 
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
 	
-	tr { border: 1px solid #ccc; }
+	.table-div tr { 
+        border: 1px solid #ccc; 
+    }
 	
-	td { 
+	.table-div td { 
 		/* Behave  like a "row" */
 		border: none;
 		border-bottom: 1px solid #eee; 
@@ -947,7 +885,7 @@ footer img {
 		padding-left: 50%; 
 	}
 	
-	td:before { 
+	.table-div td:before { 
 		/* Now like a table header */
 		position: absolute;
 		/* Top/left values mimic padding */
@@ -958,9 +896,7 @@ footer img {
 		white-space: nowrap;
 	}
 	
-	/*
-	Label the data
-	*/
+	/* Label the data */
 	#product-table td:nth-of-type(1):before { content: "Product name"; }
 	#product-table td:nth-of-type(2):before { content: "Description"; }
 	#product-table td:nth-of-type(3):before { content: "Price"; }
@@ -978,23 +914,5 @@ footer img {
 	#user-table td:nth-of-type(5):before { content: "Date created"; }
 	#user-table td:nth-of-type(6):before { content: "Last update"; }
 	#user-table td:nth-of-type(7):before { content: "Edit"; }
-    #user-table td:nth-of-type(8):before { content: "Delete"; }
-    
+    #user-table td:nth-of-type(8):before { content: "Delete"; } 
 }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

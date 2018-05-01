@@ -1,10 +1,10 @@
 <div id="admin-nav-wrapper">
     <nav id="admin-nav">
         <ul class="sm sm-mint admin-nav-ul">
-            <li class="admin-nav-li"><a class="admin-home admin-nav-a" href="/admin">Admin Home</a></ class="admin-li">
-            <li class="admin-nav-li"><a class="admin-nav-a" href="/admin/users">Members</a></ class="admin-li">
-            <li class="admin-nav-li"><a class="admin-nav-a" href="/admin/products">Products</a></ class="admin-li">                 
-            <li class="admin-nav-li"><a class="admin-nav-a" href="/logout">Logout</a></ class="admin-li">
+            <li class="admin-nav-li"><a class="admin-home admin-nav-a" href="/admin">Admin Home</a></li>
+            <li class="admin-nav-li"><a class="admin-nav-a" href="/admin/users">Members</a></li>
+            <li class="admin-nav-li"><a class="admin-nav-a" href="/admin/products">Products</a></li>                 
+            <li class="admin-nav-li"><a class="admin-nav-a" href="/logout">Logout</a></li>
         </ul>
     </nav>
 </div>

@@ -13,6 +13,7 @@
 @endsection
 
 @section('content')
+<div class="form-div">
     <table id="members-page-table">
         <tr>
             <td class="right-align">Logged in as:</td>
@@ -28,7 +29,21 @@
         </tr>
     </table>
 
-   
-    <a href="/edit-profile">Edit your profile</a>
+    <!--</div>
+        <p class="members-p label">Logged in as:</p>
+        <p class="members-p">{{ Auth::user()->name }}</p>
+    </div>
 
+    </div>
+        <p class="members-p label">Email address:</p>
+        <p class="members-p">{{ Auth::user()->email }}</p>
+    </div>
+
+    </div>
+        <p class="members-p label">Phone Number:</p>
+        <p class="members-p">{{ Auth::user()->phone }}</p>
+    </div>-->
+   
+    <a href="/edit-profile" class="form-submit">Edit your profile</a>
+</div>
 @endsection

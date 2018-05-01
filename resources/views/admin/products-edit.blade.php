@@ -14,7 +14,7 @@
 
 @section('content')
     @include('partials.show-messages')
-    <div id="product-edit-form-div">
+    <div class="form-div">
 
         {!! Form::open(['id' => 'product-edit-form']) !!}
 
@@ -115,7 +115,8 @@
         </div>
 
         {!! Form::close() !!}
-
-        <a class="form-submit delete-submit" href="/admin/delete-product/{{ $product->id }}" onclick="return confirm('Are you sure?')">Delete This Product</a>
     </div>
+        <br>
+        <a class="form-submit delete-submit" href="/admin/delete-product/{{ $product->id }}" onclick="return confirm('Are you sure?')">Delete This Product</a>
+    
 @endsection
